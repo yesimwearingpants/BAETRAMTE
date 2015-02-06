@@ -1,4 +1,35 @@
+#my Stuff
+/.settings
+/eclipse
+/New
+/source
+/NotEnoughItems
 *.class
+#ant stuff
+/bin/
+/download/
+#Remove OS generated garbage
+*/.DS_Store
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*.jar
+desktop.ini
+/build.properties
+desktop.ini
+/bin
+#gradle stuff
+/.gradle
+/build/
+/run/
+CREDITS-fml.xml
+.txt
+.project
+.classpath
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
