@@ -6,6 +6,8 @@ import net.minecraft.item.ItemStack;
 //import tconstruct.library.TConstructRegistry;
 
 
+
+import com.yiwp.creativetab.TCECreativeTab;
 import com.yiwp.lib.reference.Reference;
 
 import cpw.mods.fml.relauncher.Side;
@@ -14,8 +16,10 @@ public class ItemTCE extends Item
 {
 public ItemTCE()
 {
-super();
-//this.setCreativeTab(TConstructRegistry.materialTab);
+	super();
+	this.maxStackSize = 64;
+	this.setCreativeTab(TCECreativeTab.INSTANCE);
+
 }
 @Override
 public String getUnlocalizedName()

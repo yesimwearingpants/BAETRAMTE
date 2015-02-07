@@ -9,12 +9,18 @@ package com.yiwp.creativetab;
  * Botania License: http://botaniamod.net/license.php
  * 
  * File Created @ [Jan 14, 2014, 5:20:53 PM (GMT)]
+ * 
+ * And Modified by <SomeNoNameModder>
+ * 
  */
 
+import java.util.Iterator;
 import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.yiwp.block.MetalBlock;
+import com.yiwp.item.ItemTCE;
 import com.yiwp.lib.reference.Reference;
 
 import mods.railcraft.common.items.ModItems;
@@ -36,7 +42,7 @@ public final class TCECreativeTab extends CreativeTabs {
 
 	@Override
 	public ItemStack getIconItemStack() {
-		return new ItemStack(ModItems.lexicon);
+		return new ItemStack(MetalBlock.BlockTetsu);
 	}
 
 	@Override
@@ -53,9 +59,22 @@ public final class TCECreativeTab extends CreativeTabs {
 	public void displayAllReleventItems(List list) {
 		this.list = list;
 
-		//Do This
+		Iterator iterator = ItemTCE.itemRegistry.iterator();
+
+        while (iterator.hasNext())   {
+            ItemTCE item = (ItemTCE)iterator.next();
+
+            if (item == null)    {
+                continue;
+                
+            }
+            if (TCECreativeTab.INSTANCE == this)
+            {
+                item.getSubItems(item, this, list);
+            }
+        }
+    }
 		
-	}
 
 	private void addItem(Item item) {
 		item.getSubItems(item, this, list);
