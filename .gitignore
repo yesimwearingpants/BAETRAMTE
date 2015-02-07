@@ -1,9 +1,6 @@
 #my Stuff
 /.settings
 /eclipse
-/New
-/source
-/NotEnoughItems
 *.class
 #ant stuff
 /bin/
