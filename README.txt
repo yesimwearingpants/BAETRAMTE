@@ -1,37 +1,20 @@
--------------------------------------------
-Source installation information for modders
--------------------------------------------
-This code follows the Minecraft Forge installation methodology. It will apply
-some small patches to the vanilla MCP source code, giving you and it access 
-to some of the data and functions you need to build a successful mod.
+BATMAN++
 
-Note also that the patches are built against "unrenamed" MCP source code (aka
-srgnames) - this means that you will not be able to read them directly against
-normal code.
+Short for
 
-Source pack installation information:
+Botania ArsMagica Thaumcraft Metallurgy AppliedEnergistics N.More
 
-Standalone source installation
-==============================
+is
 
-To install this source code for development purposes, extract this zip file.
-It ships with a demonstration mod. Run 'gradlew setupDevWorkspace' to create
-a gradle environment primed with FML. Run 'gradlew eclipse' or 'gradlew idea' to
-create an IDE workspace of your choice.
-Refer to ForgeGradle for more information about the gradle environment
-Note: On macs or linux you run the './gradlew.sh' instead of 'gradlew'
+A Tech Magic Integration Mod. I just Started so there in not much to tell 
+but I am Planning;
+TConstruct tools of the Core
+Living Metal - with an Ability to Self Heal
+A way To Repair TCon Tools With Instrumentum
+(this is Just An Idea Im Toying With But AE Corruption - Bad and Good)
+Deconstruction Matrix for Breaking Down Items (with AE) for use in Infusion Crafting
 
-Forge source installation
-=========================
-MinecraftForge ships with this code and installs it as part of the forge
-installation process, no further action is required on your part.
+If you have an Idea feel Free to submit it as an issue (or a pull request...lol)
+ 
 
-For reference this is version @MAJOR@.@MINOR@.@REV@.@BUILD@ of FML
-for Minecraft version @MCVERSION@.
-
-LexManos' Install Video
-=======================
-https://www.youtube.com/watch?v=8VEdtQLuLO0&feature=youtu.be
-
-For more details update more often refer to the Forge Forums:
-http://www.minecraftforge.net/forum/index.php/topic,14048.0.html
+All Credits to Vazkii, Azanor, mDiyo & the SlimeKnights, Team Metallurgy, AlgorithimX2, KingLemming and Team COFH, and JadedCat (I was working on a modpack with minetweaker [inspired by Agrarian Skyies] and realized in order to do what I wanted it was easier to just write a mod) I apologize If i missed any I'll gett them eventually
