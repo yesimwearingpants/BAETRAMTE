@@ -2,8 +2,6 @@ package com.yiwp.block;
 
 import java.util.List;
 
-import com.yiwp.creativetab.TCECreativeTab;
-
 import mantle.blocks.MantleBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -11,6 +9,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+
+import com.yiwp.creativetab.BPPCreativeTab;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -22,7 +23,7 @@ public abstract class ExtBlock extends MantleBlock {
 	
 	public ExtBlock(Material material, String[] tex, String name) {
 		super(material);
-		this.setCreativeTab(TCECreativeTab.INSTANCE);
+		this.setCreativeTab(BPPCreativeTab.INSTANCE);
 		this.setBlockName(name);
 	}
 

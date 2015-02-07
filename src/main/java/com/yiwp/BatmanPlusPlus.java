@@ -14,11 +14,11 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, guiFactory = Reference.GUIFACTORY)
-public class TiCExtras
+public class BatmanPlusPlus
 {
 	
 	@Mod.Instance(Reference.INSTANCE)
-	public static TiCExtras instance;
+	public static BatmanPlusPlus instance;
 	
 	@SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.SERVER)
 	public static IProxy proxy;

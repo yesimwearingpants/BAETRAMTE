@@ -17,24 +17,21 @@ package com.yiwp.creativetab;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.annotation.Resource;
-
-import com.yiwp.block.MetalBlock;
-import com.yiwp.item.ItemTCE;
-import com.yiwp.lib.reference.Reference;
-
-import mods.railcraft.common.items.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public final class TCECreativeTab extends CreativeTabs {
+import com.yiwp.block.MetalBlock;
+import com.yiwp.item.BPPItem;
+import com.yiwp.lib.reference.Reference;
 
-	public static TCECreativeTab INSTANCE = new TCECreativeTab();
+public final class BPPCreativeTab extends CreativeTabs {
+
+	public static BPPCreativeTab INSTANCE = new BPPCreativeTab();
 	List list;
 
-	public TCECreativeTab() {
+	public BPPCreativeTab() {
 		super(Reference.MODID);
 		setNoTitle();
 		setBackgroundImageName(Reference.CREATIVETAB);
@@ -59,16 +56,16 @@ public final class TCECreativeTab extends CreativeTabs {
 	public void displayAllReleventItems(List list) {
 		this.list = list;
 
-		Iterator iterator = ItemTCE.itemRegistry.iterator();
+		Iterator iterator = BPPItem.itemRegistry.iterator();
 
         while (iterator.hasNext())   {
-            ItemTCE item = (ItemTCE)iterator.next();
+            BPPItem item = (BPPItem)iterator.next();
 
             if (item == null)    {
                 continue;
                 
             }
-            if (TCECreativeTab.INSTANCE == this)
+            if (BPPCreativeTab.INSTANCE == this)
             {
                 item.getSubItems(item, this, list);
             }

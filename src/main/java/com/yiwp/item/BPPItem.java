@@ -5,20 +5,18 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 //import tconstruct.library.TConstructRegistry;
 
-
-
-import com.yiwp.creativetab.TCECreativeTab;
+import com.yiwp.creativetab.BPPCreativeTab;
 import com.yiwp.lib.reference.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-public class ItemTCE extends Item
+public class BPPItem extends Item
 {
-public ItemTCE()
+public BPPItem()
 {
 	super();
 	this.maxStackSize = 64;
-	this.setCreativeTab(TCECreativeTab.INSTANCE);
+	this.setCreativeTab(BPPCreativeTab.INSTANCE);
 
 }
 @Override
