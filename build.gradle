@@ -2,12 +2,12 @@ buildscript {
     repositories {
         mavenCentral()
         maven {
-            name = "forge"
-            url = "http://files.minecraftforge.net/maven"
+        	name = "forge"
+        	url = "http://files.minecraftforge.net/maven"
         }
-        maven {
-            name = "sonatype"
-            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+	maven {
+		name = "sonatype"
+		url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
     }
     dependencies {
@@ -17,13 +17,39 @@ buildscript {
 
 apply plugin: 'forge'
 
+
 version = "1.0"
 group= "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "modid"
 
 minecraft {
-    version = "1.7.10-10.13.2.1286"
+    version = "1.7.10-10.13.2.1291"
     runDir = "eclipse"
+
+	replaceIn "reference/Reference.java"
+	replace "@VERSION@", project.version
+}
+
+repositories {
+	 maven {
+		name 'DVS1 Maven FS'
+		url 'http://dvs1.progwml6.com/files/maven'
+	}
+	maven { // the repo from which to get NEI and stuff
+		name 'CB Repo'
+		url "http://chickenbones.net/maven/"
+	}
+	maven { // The repo from which to get waila
+		name "Mobius Repo"
+		url "http://mobiusstrip.eu/maven"
+	}
+	maven {
+		 url 'http://maven.cil.li/'
+	}
+	ivy {
+		name 'FMP'
+		artifactPattern "http://files.minecraftforge.net/[module]/[module]-dev-[revision].[ext]"
+	}
 }
 
 dependencies {
@@ -36,9 +62,21 @@ dependencies {
     //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
     //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
 
-    // for more info...
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    compile "codechicken:CodeChickenLib:1.7.10-1.1.1.11:src"
+    compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:src"
+    compile "codechicken:NotEnoughItems:1.0.4.83:src"
+    compile "codechicken:ForgeMultipart:1.7.10-1.1.1.321:src"
+    compile "tconstruct:TConstruct:1.7.10-1.8.2.build880:sources"
+    compile "natura:Natura:1.7.10-98.6a6cca1:sources"
+    compile 'com.mod-buildcraft:buildcraft:6.3.4:dev'
+    //compile group: 'thermalexpansion', name: 'ThermalExpansion', version: config.texpan.version, ext: 'jar'
+    //compile group: 'cofh', name: 'CoFHCore', version: config.cofh.version, ext: 'jar'
+    compile "mcp.mobius.waila:Waila-1.5.8a_1.7.10-src"
+    compile "appeng:appliedenergistics2:rv2-beta-8:dev"
+    compile "codechicken:EnderStorage:1.7.10-1.4.5.22:src"
+    compile "mantle:Mantle:1.7.10-0.3.2.jenkins187:sources"
+    compile "li.cil.oc:OpenComputers:MC1.7.10-1.4.6.376-dev:api"
+    compile "li.cil.oc:OpenComputers:MC1.7.10-1.4.6.376-dev:src"
 
 }
 

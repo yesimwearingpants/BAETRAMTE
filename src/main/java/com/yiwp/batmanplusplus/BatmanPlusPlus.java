@@ -1,13 +1,16 @@
-package com.yiwp;
+package com.yiwp.batmanplusplus;
 
-import com.yiwp.lib.config.ConfigurationHandler;
-import com.yiwp.lib.reference.Reference;
-import com.yiwp.proxy.IProxy;
-import com.yiwp.recipes.Metals;
-import com.yiwp.utils.LogHelper;
+/*import com.yiwp.batmanplusplus.block.BlockInit;
+import com.yiwp.batmanplusplus.item.ItemInit;
+import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
+import com.yiwp.batmanplusplus.lib.reference.Reference;
+import com.yiwp.batmanplusplus.lib.utils.LogHelper;
+import com.yiwp.batmanplusplus.proxy.IProxy;
+import com.yiwp.batmanplusplus.recipes.Metals;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -22,13 +25,18 @@ public class BatmanPlusPlus
 	
 	@SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.SERVER)
 	public static IProxy proxy;
+	
+	@Mod.Metadata
+	public static ModMetadata meta;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)	{
 		
+		
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-		
+		BlockInit.init();
+		ItemInit.init();
 		LogHelper.warn("##########Pre Initialization Complete##########");
 		
 	}
@@ -48,4 +56,4 @@ public class BatmanPlusPlus
     	
     	LogHelper.fatal("##########Post Initialization Complete##########");
     }
-}
+}*/

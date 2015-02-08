@@ -1,8 +1,8 @@
-package com.yiwp.utils;
+package com.yiwp.batmanplusplus.lib.utils;
 
 import org.apache.logging.log4j.Level;
 
-import com.yiwp.lib.reference.Reference;
+import com.yiwp.batmanplusplus.lib.reference.Reference;
 
 import cpw.mods.fml.common.FMLLog;
 

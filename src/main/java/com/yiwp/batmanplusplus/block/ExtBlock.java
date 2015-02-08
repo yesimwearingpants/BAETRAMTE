@@ -1,4 +1,4 @@
-package com.yiwp.block;
+package com.yiwp.batmanplusplus.block;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
-import com.yiwp.creativetab.BPPCreativeTab;
+import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

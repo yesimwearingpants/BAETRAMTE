@@ -1,4 +1,4 @@
-package com.yiwp.client.gui;
+package com.yiwp.batmanplusplus.client.gui;
 
 import java.util.Set;
 

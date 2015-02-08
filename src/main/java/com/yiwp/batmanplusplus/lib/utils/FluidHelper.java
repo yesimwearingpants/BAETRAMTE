@@ -1,4 +1,4 @@
-package com.yiwp.utils;
+package com.yiwp.batmanplusplus.lib.utils;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;

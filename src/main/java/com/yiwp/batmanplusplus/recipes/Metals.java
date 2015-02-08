@@ -1,4 +1,4 @@
-package com.yiwp.recipes;
+package com.yiwp.batmanplusplus.recipes;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -11,8 +11,8 @@ import tconstruct.library.crafting.Smeltery;
 import tconstruct.smeltery.TinkerSmeltery;
 import tconstruct.util.config.PHConstruct;
 
-import com.yiwp.lib.config.ConfigurationHandler;
-import com.yiwp.lib.reference.Names;
+import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
+import com.yiwp.batmanplusplus.lib.reference.Names;
 
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;

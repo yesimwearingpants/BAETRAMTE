@@ -1,4 +1,4 @@
-package com.yiwp.lib.reference;
+package com.yiwp.batmanplusplus.lib.reference;
 
 import net.minecraft.block.Block;
 import net.minecraftforge.fluids.Fluid;
@@ -31,17 +31,17 @@ public static final class Blocks	{
 	public static final String adamantiumBlock = "adamantium" + i;
 	public static final String titaniumAlumideBlock = "titaniumAlumide" + i;
 	
-	public static final class Name {
+	public static final class Fluid {
 	
-		public static final String molybdochalkosBlock = "Molybdochalkos " + i;
-		public static final String orichalcumBlock = "Orichalcum " + i;
-		public static final String cactusSteelBlock = "CactusSteel " + i;
-		public static final String meteoricIronBlock = "MeteoricIron " + i;
-		public static final String tetsuBlock = "Tetsu " + i;
-		public static final String titaniumBlock = "Titanium " + i;
-		public static final String vibraniumBlock = "Vibranium " + i;
-		public static final String adamantiumBlock = "Adamantium " + i;
-		public static final String titaniumAlumideBlock = "Titanium-Alumide " + i;
+		public static final String molybdochalkosBlock = "molybdochalkos" + l;
+		public static final String orichalcumBlock = "orichalcum" + l;
+		public static final String cactusSteelBlock = "cactusSteel" + l;
+		public static final String meteoricIronBlock = "meteoricIron" + l;
+		public static final String tetsuBlock = "tetsu" + l;
+		public static final String titaniumBlock = "titanium" + l;
+		public static final String vibraniumBlock = "vibranium" + l;
+		public static final String adamantiumBlock = "adamantium" + l;
+		public static final String titaniumAlumideBlock = "titaniumAlumide" + l;
 		
 		}
 	
@@ -69,31 +69,6 @@ public static final class Items		{
 	public static final String vibraniumNugget = "vibranium" + k;
 	public static final String adamantiumNugget = "adamantium" + k;
 	public static final String titaniumAlumideNugget = "titaniumAlumide" + k;
-	
-	
-	public static final class Name {
-		
-		public static final String molybdochalkosIngot = "Molybdochalkos " + j;
-		public static final String orichalcumIngot = "Orichalcum " + j;
-		public static final String cactusSteelIngot = "CactusSteel " + j;
-		public static final String meteoricIronIngot = "MeteoricIron " + j;
-		public static final String tetsuIngot = "Tetsu " + j;
-		public static final String titaniumIngot = "Titanium " + j;
-		public static final String vibraniumIngot = "Vibranium " + j;
-		public static final String adamantiumIngot = "Adamantium " + j;
-		public static final String titaniumAlumideIngot = "Titanium-Alumide " + j;
-		
-		public static final String molybdochalkosNugget = "Molybdochalkos " + k;
-		public static final String orichalcumNugget = "Orichalcum " + k;
-		public static final String cactusSteelNugget = "CactusSteel " + k;
-		public static final String meteoricIronNugget = "MeteoricIron " + k;
-		public static final String tetsuNugget = "Tetsu " + k;
-		public static final String titaniumNugget = "Titanium " + k;
-		public static final String vibraniumNugget = "Vibranium " + k;
-		public static final String adamantiumNugget = "Adamantium " + k;
-		public static final String titaniumAlumideNugget = "Titanium-Alumide " + k;
-		
-		}
 	
 	}
 

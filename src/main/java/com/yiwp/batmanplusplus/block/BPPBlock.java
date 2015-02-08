@@ -1,6 +1,6 @@
-package com.yiwp.block;
+package com.yiwp.batmanplusplus.block;
 
-import com.yiwp.lib.reference.Reference;
+import com.yiwp.batmanplusplus.lib.reference.Reference;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.material.Material;

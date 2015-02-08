@@ -1,11 +1,11 @@
-package com.yiwp.lib.config;
+package com.yiwp.batmanplusplus.lib.config;
 
 import java.io.File;
 
 import net.minecraftforge.common.config.Configuration;
 
-import com.yiwp.lib.reference.Names;
-import com.yiwp.lib.reference.Reference;
+import com.yiwp.batmanplusplus.lib.reference.Names;
+import com.yiwp.batmanplusplus.lib.reference.Reference;
 
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

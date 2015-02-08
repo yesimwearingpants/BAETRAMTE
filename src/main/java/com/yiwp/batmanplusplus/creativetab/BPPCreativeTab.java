@@ -1,4 +1,4 @@
-package com.yiwp.creativetab;
+package com.yiwp.batmanplusplus.creativetab;
 
 /**
  * This class was created by <Vazkii>. It's distributed as
@@ -22,9 +22,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import com.yiwp.block.MetalBlock;
-import com.yiwp.item.BPPItem;
-import com.yiwp.lib.reference.Reference;
+import com.yiwp.batmanplusplus.block.MetalBlock;
+import com.yiwp.batmanplusplus.item.BPPItem;
+import com.yiwp.batmanplusplus.lib.reference.Reference;
 
 public final class BPPCreativeTab extends CreativeTabs {
 
