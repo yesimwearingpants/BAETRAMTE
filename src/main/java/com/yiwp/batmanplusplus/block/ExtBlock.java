@@ -9,6 +9,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
 
 import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
 
@@ -72,6 +73,12 @@ public abstract class ExtBlock extends MantleBlock {
             list.add(new ItemStack(block, 1, iter));
         }
     }
+
+	public boolean isBeaconBase(IBlockAccess worldObj, int x, int y, int z,
+			int beaconX, int beaconY, int beaconZ) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 	
 

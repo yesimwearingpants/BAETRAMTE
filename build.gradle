@@ -68,15 +68,28 @@ dependencies {
     compile "codechicken:ForgeMultipart:1.7.10-1.1.1.321:src"
     compile "tconstruct:TConstruct:1.7.10-1.8.2.build880:sources"
     compile "natura:Natura:1.7.10-98.6a6cca1:sources"
-    compile 'com.mod-buildcraft:buildcraft:6.3.4:dev'
-    //compile group: 'thermalexpansion', name: 'ThermalExpansion', version: config.texpan.version, ext: 'jar'
-    //compile group: 'cofh', name: 'CoFHCore', version: config.cofh.version, ext: 'jar'
     compile "mcp.mobius.waila:Waila-1.5.8a_1.7.10-src"
-    compile "appeng:appliedenergistics2:rv2-beta-8:dev"
     compile "codechicken:EnderStorage:1.7.10-1.4.5.22:src"
     compile "mantle:Mantle:1.7.10-0.3.2.jenkins187:sources"
+    compile "li.cil.oc:OpenComputers:MC1.7.10-1.4.6.376-src:src"
+    compile "codechicken:CodeChickenLib:1.7.10-1.1.1.11:dev"
+    compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:dev"
+    compile "codechicken:NotEnoughItems:1.0.4.83:dev"
+    compile "codechicken:ForgeMultipart:1.7.10-1.1.1.321:dev"
+    compile "tconstruct:TConstruct:1.7.10-1.8.2.build880:deobf"
+    compile "natura:Natura:1.7.10-98.6a6cca1:deobf"
+    compile "mcp.mobius.waila:Waila-1.5.8a_1.7.10-dev"
+    compile "mcp.mobius.waila:Waila-1.5.8a_1.7.10-src"
+    compile "codechicken:EnderStorage:1.7.10-1.4.5.22:dev"
+    compile "mantle:Mantle:1.7.10-0.3.2.jenkins187:deobf"
+    compile "li.cil.oc:OpenComputers:MC1.7.10-1.4.6.376-dev:dev"
+    compile 'com.mod-buildcraft:buildcraft:6.3.4:dev'
+    compile 'com.mod-buildcraft:buildcraft:6.3.4:src'
+    //compile group: 'thermalexpansion', name: 'ThermalExpansion', version: config.texpan.version, ext: 'jar'
+    //compile group: 'cofh', name: 'CoFHCore', version: config.cofh.version, ext: 'jar'
+    compile "appeng:appliedenergistics2:rv2-beta-8:dev"
+    compile "appeng:appliedenergistics2:rv2-beta-8:src"
     compile "li.cil.oc:OpenComputers:MC1.7.10-1.4.6.376-dev:api"
-    compile "li.cil.oc:OpenComputers:MC1.7.10-1.4.6.376-dev:src"
 
 }
 
