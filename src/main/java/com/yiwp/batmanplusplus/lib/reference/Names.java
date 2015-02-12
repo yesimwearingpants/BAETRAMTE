@@ -4,9 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraftforge.fluids.Fluid;
 
 public class Names {
-	
-	public static Block cactus = net.minecraft.init.Blocks.cactus;
-	
+		
 	private static String i = "Block";
 	private static String j = "Ingot";
 	private static String k = "Nugget";
