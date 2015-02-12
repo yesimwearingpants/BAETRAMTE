@@ -30,25 +30,25 @@ public class ItemInit {
 	
 	public static void init() {
 		
-		GameRegistry.registerItem(ingotAdamantium, Names.Items.adamantiumIngot);
-		GameRegistry.registerItem(ingotCactusSteel, Names.Items.cactusSteelIngot);
-		GameRegistry.registerItem(ingotMeteoricIron, Names.Items.meteoricIronIngot);
-		GameRegistry.registerItem(ingotMolybdochalkos, Names.Items.molybdochalkosIngot);
-		GameRegistry.registerItem(ingotOrichalcum, Names.Items.orichalcumIngot);
-		GameRegistry.registerItem(ingotTetsu, Names.Items.tetsuIngot);
-		GameRegistry.registerItem(ingotTitanium, Names.Items.titaniumIngot);
-		GameRegistry.registerItem(ingotTitaniumAlumide, Names.Items.titaniumAlumideIngot);
-		GameRegistry.registerItem(ingotVibranium, Names.Items.vibraniumIngot);
+		GameRegistry.registerItem(ingotAdamantium, Names.ingot(Names.adamantium));
+		GameRegistry.registerItem(ingotCactusSteel, Names.ingot(Names.cactusSteel));
+		GameRegistry.registerItem(ingotMeteoricIron, Names.ingot(Names.meteoricIron));
+		GameRegistry.registerItem(ingotMolybdochalkos, Names.ingot(Names.molybdochalkos));
+		GameRegistry.registerItem(ingotOrichalcum, Names.ingot(Names.orichalcum));
+		GameRegistry.registerItem(ingotTetsu, Names.ingot(Names.tetsu));
+		GameRegistry.registerItem(ingotTitanium, Names.ingot(Names.titanium));
+		GameRegistry.registerItem(ingotTitaniumAlumide, Names.ingot(Names.titaniumAlumide));
+		GameRegistry.registerItem(ingotVibranium, Names.ingot(Names.vibranium));
 		
-		GameRegistry.registerItem(nuggetAdamantium, Names.Items.adamantiumNugget);
-		GameRegistry.registerItem(nuggetCactusSteel, Names.Items.cactusSteelNugget);
-		GameRegistry.registerItem(nuggetMeteoricIron, Names.Items.meteoricIronNugget);
-		GameRegistry.registerItem(nuggetMolybdochalkos, Names.Items.molybdochalkosNugget);
-		GameRegistry.registerItem(nuggetOrichalcum, Names.Items.orichalcumNugget);
-		GameRegistry.registerItem(nuggetTetsu, Names.Items.tetsuNugget);
-		GameRegistry.registerItem(nuggetTitanium, Names.Items.titaniumNugget);
-		GameRegistry.registerItem(nuggetTitaniumAlumide, Names.Items.titaniumAlumideNugget);
-		GameRegistry.registerItem(nuggetVibranium, Names.Items.vibraniumNugget);
+		GameRegistry.registerItem(nuggetAdamantium, Names.nugget(Names.adamantium));
+		GameRegistry.registerItem(nuggetCactusSteel, Names.nugget(Names.cactusSteel));
+		GameRegistry.registerItem(nuggetMeteoricIron, Names.nugget(Names.meteoricIron));
+		GameRegistry.registerItem(nuggetMolybdochalkos, Names.nugget(Names.molybdochalkos));
+		GameRegistry.registerItem(nuggetOrichalcum, Names.nugget(Names.orichalcum));
+		GameRegistry.registerItem(nuggetTetsu, Names.nugget(Names.tetsu));
+		GameRegistry.registerItem(nuggetTitanium, Names.nugget(Names.titanium));
+		GameRegistry.registerItem(nuggetTitaniumAlumide, Names.nugget(Names.titaniumAlumide));
+		GameRegistry.registerItem(nuggetVibranium, Names.nugget(Names.vibranium));
 		
 	}
 

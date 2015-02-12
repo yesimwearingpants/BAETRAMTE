@@ -1,6 +1,7 @@
 package com.yiwp.batmanplusplus;
 
-/*import com.yiwp.batmanplusplus.block.BlockInit;
+import com.yiwp.batmanplusplus.block.BlockInit;
+import com.yiwp.batmanplusplus.fluids.FluidInit;
 import com.yiwp.batmanplusplus.item.ItemInit;
 import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
@@ -37,6 +38,7 @@ public class BatmanPlusPlus
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 		BlockInit.init();
 		ItemInit.init();
+		FluidInit.init();
 		LogHelper.warn("##########Pre Initialization Complete##########");
 		
 	}
@@ -56,4 +58,4 @@ public class BatmanPlusPlus
     	
     	LogHelper.fatal("##########Post Initialization Complete##########");
     }
-}*/
+}

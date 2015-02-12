@@ -17,15 +17,15 @@ public class MetalBlock extends ExtBlock	{
 		"blockMeteoricIron", "blockTetsu", "blockTitanium", "blockVibranium", "blockAdamantium", "blockTitanium", "blockTiAl",};
     public IIcon[] icons;
 	
-	public static MetalBlock BlockMolybdochalkas = new MetalBlock(3.1f, 9.0f, Names.Blocks.molybdochalkosBlock);
-	public static MetalBlock BlockOrichalcum = new MetalBlock(3.5f, 9.9f, Names.Blocks.orichalcumBlock);
-	public static MetalBlock BlockCactusSteel = new MetalBlock(0.1f, 0.1f, Names.Blocks.cactusSteelBlock);
-	public static MetalBlock BlockMeteoricIron = new MetalBlock(11.0f, 35.0f, Names.Blocks.meteoricIronBlock);
-	public static MetalBlock BlockTetsu = new MetalBlock(11.5f, 35.0f, Names.Blocks.tetsuBlock);
-	public static MetalBlock BlockTitanium  = new MetalBlock(10.0f, 30.0f, Names.Blocks.titaniumBlock);
-	public static MetalBlock BlockVibranium = new MetalBlock(20.f, 40.0f, Names.Blocks.vibraniumBlock);
-	public static MetalBlock BlockAdamantium = new MetalBlock(16.0f, 50.0f, Names.Blocks.adamantiumBlock);
-	public static MetalBlock BlockTitaniumAlumide = new MetalBlock(7.5f, 25.0f, Names.Blocks.titaniumAlumideBlock);
+    public static MetalBlock BlockMolybdochalkas = new MetalBlock(3.1f, 9.0f, Names.block(Names.molybdochalkos));
+	public static MetalBlock BlockOrichalcum = new MetalBlock(3.5f, 9.9f, Names.block(Names.orichalcum));
+	public static MetalBlock BlockCactusSteel = new MetalBlock(0.1f, 0.1f, Names.block(Names.cactusSteel));
+	public static MetalBlock BlockMeteoricIron = new MetalBlock(11.0f, 35.0f, Names.block(Names.meteoricIron));
+	public static MetalBlock BlockTetsu = new MetalBlock(11.5f, 35.0f, Names.block(Names.tetsu));
+	public static MetalBlock BlockTitanium  = new MetalBlock(10.0f, 30.0f, Names.block(Names.titanium));
+	public static MetalBlock BlockVibranium = new MetalBlock(20.f, 40.0f, Names.block(Names.vibranium));
+	public static MetalBlock BlockAdamantium = new MetalBlock(16.0f, 50.0f, Names.block(Names.adamantium));
+	public static MetalBlock BlockTitaniumAlumide = new MetalBlock(7.5f, 25.0f, Names.block(Names.titaniumAlumide));
 	
 	public MetalBlock(float hardness, float resistance, String name) {
 		super(Material.iron, metalTypes, name);
