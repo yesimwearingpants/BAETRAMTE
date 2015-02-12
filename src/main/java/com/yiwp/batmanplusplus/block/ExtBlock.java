@@ -80,6 +80,4 @@ public abstract class ExtBlock extends MantleBlock {
 		return false;
 	}
 	
-	
-
 }
