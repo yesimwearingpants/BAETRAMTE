@@ -8,7 +8,7 @@ public class Reference {
     public static final String BUILD = "0";
     public static final String INSTANCE = MODID;
     public static final String CLIENT = "com.yiwp.batmanplusplus.proxy.BPPProxyClient";
-    public static final String SERVER = "com.yiwp..batmanplusplusproxy.BPPProxyServer";
+    public static final String SERVER = "com.yiwp.batmanplusplus.proxy.BPPProxyServer";
     public static final String GUIFACTORY = "com.yiwp.batmanplusplus.client.gui.GuiFactory";
     
     public static final String CREATIVETAB = "PNG.png";

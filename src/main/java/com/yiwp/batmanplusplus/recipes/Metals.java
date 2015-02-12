@@ -31,15 +31,15 @@ public class Metals {
 		Block darkIronOre = GameRegistry.findBlock("factorization", "DarkIronOre");
 		
 		if(darkIron != null && darkIronOre != null) {
-			Smeltery.addMelting(new ItemStack(darkIron), 800, new FluidStack(FluidInit.FluidMoltenDarkIron, TConstruct.ingotLiquidValue));
-			Smeltery.addMelting(darkIronOre, 0, 750, new FluidStack(FluidInit.FluidMoltenDarkIron, ((int) TConstruct.ingotLiquidValue * (int) PHConstruct.ingotsPerOre)));
+			Smeltery.addMelting(new ItemStack(darkIron), 800, new FluidStack(FluidInit.FluidDarkIron, TConstruct.ingotLiquidValue));
+			Smeltery.addMelting(darkIronOre, 0, 750, new FluidStack(FluidInit.FluidDarkIron, ((int) TConstruct.ingotLiquidValue * (int) PHConstruct.ingotsPerOre)));
 		}
 		if(Loader.isModLoaded("Thaumcraft") == true || Loader.isModLoaded("AWayofTime") == true || 
 				Loader.isModLoaded("EE3") == true){
 		
-			Smeltery.addAlloyMixing(new FluidStack(FluidInit.FluidMoltenOrichalcum, TConstruct.ingotLiquidValue * 5), new FluidStack(TinkerSmeltery.moltenGoldFluid, 
+			Smeltery.addAlloyMixing(new FluidStack(FluidInit.FluidOrichalcum, TConstruct.ingotLiquidValue * 5), new FluidStack(TinkerSmeltery.moltenGoldFluid, 
 				TConstruct.ingotLiquidValue * 2), new FluidStack(TinkerSmeltery.moltenCopperFluid, TConstruct.ingotLiquidValue * 3));
-			Smeltery.addAlloyMixing(new FluidStack(FluidInit.FluidMoltenMolybdochalkos, TConstruct.ingotLiquidValue * 2), new FluidStack(TinkerSmeltery.moltenCopperFluid, 
+			Smeltery.addAlloyMixing(new FluidStack(FluidInit.FluidMolybdochalkos, TConstruct.ingotLiquidValue * 2), new FluidStack(TinkerSmeltery.moltenCopperFluid, 
 				TConstruct.ingotLiquidValue), new FluidStack(TinkerSmeltery.moltenLeadFluid, TConstruct.ingotLiquidValue));
 		}
 		

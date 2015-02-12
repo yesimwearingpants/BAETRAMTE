@@ -59,6 +59,17 @@ public class Names {
 		
 	}
 	
+	public static final class Textures {
+		
+		public static String liquidstill(String tex) {
+			return "liquid_" + tex;
+		}
+		
+		public static String liquidflowing(String tex) {
+			return liquidstill(tex) + "_flow";
+		}
+	}
+	
 	public static final class Materials	{
 		
 	}

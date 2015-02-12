@@ -11,7 +11,7 @@ TConstruct tools of the Core
 Living Metal - with an Ability to Self-Heal
 A way To Repair TCon Tools With Instrumentum
 (this is Just An Idea Im Toying With But AE Corruption - Bad and Good)
-Deconstruction Matrix for Breaking Down Items (with AE) for use in Infusion Crafting
+Deconstruction Matrix for Breaking Down Items (with AE) like the Alchemical Furnace
 
 If you have an Idea feel Free to submit it as an issue (or a pull request...lol)
 
