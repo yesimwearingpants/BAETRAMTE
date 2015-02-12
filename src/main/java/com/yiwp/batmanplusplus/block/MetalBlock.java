@@ -33,7 +33,6 @@ public class MetalBlock extends ExtBlock	{
 			
 	}
 		
-	@Override
 	public boolean isBeaconBase (IBlockAccess worldObj, int x, int y, int z, int beaconX, int beaconY, int beaconZ)	{
         return true;
         

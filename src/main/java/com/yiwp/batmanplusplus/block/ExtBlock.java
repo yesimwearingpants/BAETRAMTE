@@ -3,6 +3,7 @@ package com.yiwp.batmanplusplus.block;
 import java.util.List;
 
 import mantle.blocks.MantleBlock;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -16,7 +17,7 @@ import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public abstract class ExtBlock extends MantleBlock {
+public abstract class ExtBlock extends Block {
 	
 	public String[] textureNames;
 	public IIcon[] icons; 
@@ -73,11 +74,5 @@ public abstract class ExtBlock extends MantleBlock {
             list.add(new ItemStack(block, 1, iter));
         }
     }
-
-	public boolean isBeaconBase(IBlockAccess worldObj, int x, int y, int z,
-			int beaconX, int beaconY, int beaconZ) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 	
 }

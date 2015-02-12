@@ -1,4 +1,3 @@
-![]
 BATMAN++
 
 Short for
@@ -16,6 +15,6 @@ Deconstruction Matrix for Breaking Down Items (with AE) for use in Infusion Craf
 
 If you have an Idea feel Free to submit it as an issue (or a pull request...lol)
 
-All Credits to Vazkii, Mithion, Azanor, mDiyo & the SlimeKnights, Team Metallurgy, AlgorithimX2, KingLemming and Team COFH, and JadedCat (I was working on a modpack with minetweaker [inspired by Agrarian Skyies] and realized in order to do what I wanted it was easier to just write a mod) I apologize If i missed any I'll get them eventually
+All Credits to Vazkii, Mithion, Azanor, mDiyo & the SlimeKnights, Team Metallurgy, AlgorithimX2, KingLemming and Team COFH, and JadedCat (I was working on a modpack with minetweaker [inspired by Agrarian Skyies] and realized in order to do what I wanted it was easier to just write a mod) I apologize If I missed any I'll get them eventually.
 
 Same License https://github.com/CoFH/CoFHCore/blob/master/README.md as COFH projects
