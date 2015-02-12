@@ -2,7 +2,6 @@ package com.yiwp.batmanplusplus.block;
 
 import java.util.List;
 
-import mantle.blocks.MantleBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -12,7 +11,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 
-import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
+import com.yiwp.batmanplusplus.creativetab.BPPCreativeTabs;
+import com.yiwp.batmanplusplus.lib.reference.Names;
+import com.yiwp.batmanplusplus.lib.reference.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -23,10 +24,11 @@ public abstract class ExtBlock extends Block {
 	public IIcon[] icons; 
 	
 	
-	public ExtBlock(Material material, String[] tex, String name) {
+	public ExtBlock(Material material, String tex, String name) {
 		super(material);
-		this.setCreativeTab(BPPCreativeTab.INSTANCE);
+		this.setCreativeTab(BPPCreativeTabs.INSTANCE);
 		this.setBlockName(name);
+		this.setBlockTextureName(Names.block(tex));
 	}
 
 	@Override
@@ -35,24 +37,26 @@ public abstract class ExtBlock extends Block {
         return meta;
     }
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons (IIconRegister iconRegister)
-    {
-        this.icons = new IIcon[textureNames.length];
 
-        for (int i = 0; i < this.icons.length; ++i)
-        {
-            this.icons[i] = iconRegister.registerIcon("tinker:" + textureNames[i]);
-        }
+
+    @Override
+    public String getUnlocalizedName()
+    {
+        return String.format("tile.%s%s", Reference.MODID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon (int side, int meta)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
-        return meta < icons.length ? icons[meta] : icons[0];
+        blockIcon = iconRegister.registerIcon(String.format("%s", getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
+
+    protected String getUnwrappedUnlocalizedName(String unlocalizedName)
+    {
+        return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
+    }
+
 
     @SideOnly(Side.CLIENT)
     public int getSideTextureIndex (int side)
@@ -74,5 +78,5 @@ public abstract class ExtBlock extends Block {
             list.add(new ItemStack(block, 1, iter));
         }
     }
-	
+    
 }

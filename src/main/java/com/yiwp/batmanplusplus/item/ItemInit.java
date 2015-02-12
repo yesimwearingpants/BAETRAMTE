@@ -1,5 +1,6 @@
 package com.yiwp.batmanplusplus.item;
 
+import com.yiwp.batmanplusplus.item.ExtItem.BPPItem;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 
@@ -8,26 +9,27 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @GameRegistry.ObjectHolder(Reference.MODID)
 public class ItemInit {
 	
-	public static final BPPItem ingotMolybdochalkos = new BPPItem();
-	public static final BPPItem ingotOrichalcum = new BPPItem();
-	public static final BPPItem ingotCactusSteel = new BPPItem();
-	public static final BPPItem ingotMeteoricIron = new BPPItem();
-	public static final BPPItem ingotTetsu = new BPPItem();
-	public static final BPPItem ingotTitanium = new BPPItem();
-	public static final BPPItem ingotVibranium = new BPPItem();
-	public static final BPPItem ingotAdamantium = new BPPItem();
-	public static final BPPItem ingotTitaniumAlumide = new BPPItem();
+	public static final ExtItem ingotMolybdochalkos = new BPPItem(Names.ingot(Names.molybdochalkos));
+	public static final ExtItem ingotOrichalcum = new BPPItem(Names.ingot(Names.orichalcum));
+	public static final ExtItem ingotCactusSteel = new BPPItem(Names.ingot(Names.cactusSteel));
+	public static final ExtItem ingotMeteoricIron = new BPPItem(Names.ingot(Names.meteoricIron));
+	public static final ExtItem ingotTetsu = new BPPItem(Names.ingot(Names.tetsu));
+	public static final ExtItem ingotTitanium = new BPPItem(Names.ingot(Names.titanium));
+	public static final ExtItem ingotVibranium = new BPPItem(Names.ingot(Names.vibranium));
+	public static final ExtItem ingotAdamantium = new BPPItem(Names.ingot(Names.adamantium));
+	public static final ExtItem ingotTitaniumAlumide = new BPPItem(Names.ingot(Names.titaniumAlumide));
 	
-	public static final BPPItem nuggetMolybdochalkos = new BPPItem();
-	public static final BPPItem nuggetOrichalcum = new BPPItem();
-	public static final BPPItem nuggetCactusSteel = new BPPItem();
-	public static final BPPItem nuggetMeteoricIron = new BPPItem();
-	public static final BPPItem nuggetTetsu = new BPPItem();
-	public static final BPPItem nuggetTitanium = new BPPItem();
-	public static final BPPItem nuggetVibranium = new BPPItem();
-	public static final BPPItem nuggetAdamantium = new BPPItem();
-	public static final BPPItem nuggetTitaniumAlumide = new BPPItem();
+	public static final ExtItem nuggetMolybdochalkos = new BPPItem(Names.nugget(Names.molybdochalkos));
+	public static final ExtItem nuggetOrichalcum = new BPPItem(Names.nugget(Names.orichalcum));
+	public static final ExtItem nuggetCactusSteel = new BPPItem(Names.nugget(Names.cactusSteel));
+	public static final ExtItem nuggetMeteoricIron = new BPPItem(Names.nugget(Names.meteoricIron));
+	public static final ExtItem nuggetTetsu = new BPPItem(Names.nugget(Names.tetsu));
+	public static final ExtItem nuggetTitanium = new BPPItem(Names.nugget(Names.titanium));
+	public static final ExtItem nuggetVibranium = new BPPItem(Names.nugget(Names.vibranium));
+	public static final ExtItem nuggetAdamantium = new BPPItem(Names.nugget(Names.adamantium));
+	public static final ExtItem nuggetTitaniumAlumide = new BPPItem(Names.nugget(Names.titaniumAlumide));
 	
+	//Pre-Init
 	public static void init() {
 		
 		GameRegistry.registerItem(ingotAdamantium, Names.ingot(Names.adamantium));

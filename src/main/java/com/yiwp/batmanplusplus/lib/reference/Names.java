@@ -68,6 +68,13 @@ public class Names {
 		public static String liquidflowing(String tex) {
 			return liquidstill(tex) + "_flow";
 		}
+		public static String block(String tex) {
+			return "block" + tex;
+		}
+		
+		public static String item(String tex) {
+			return "item" + tex;
+		}
 	}
 	
 	public static final class Materials	{

@@ -18,6 +18,7 @@ import com.yiwp.batmanplusplus.lib.reference.Names;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
+@GameRegistry.ObjectHolder(Reference.MODID)
 public class FluidInit {
 	
 	public static Fluid FluidDarkIron = new BPPFluid();
@@ -42,7 +43,7 @@ public class FluidInit {
 	public static Block BlockMoltenTitaniumAlumide = new BlockBPPFluid(FluidTitaniumAlumide, Names.Textures.liquidstill(Names.titaniumAlumide), Names.titaniumAlumide);
 	
 	
-	public static void init() {
+	public static void preInit() {
 	
 		boolean isDarkIronPreReg = !FluidRegistry.registerFluid(FluidDarkIron);
 	    GameRegistry.registerBlock(BlockMoltenDarkIron, Names.fluid(Names.darkIron));

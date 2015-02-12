@@ -36,9 +36,9 @@ public class BatmanPlusPlus
 		
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-		BlockInit.init();
-		ItemInit.init();
-		FluidInit.init();
+		BlockInit.preInit();
+		ItemInit.preInit();
+		//FluidInit.preInit();
 		LogHelper.warn("##########Pre Initialization Complete##########");
 		
 	}

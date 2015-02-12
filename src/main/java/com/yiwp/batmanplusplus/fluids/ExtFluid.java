@@ -6,7 +6,7 @@ import net.minecraft.util.IIcon;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 
-import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
+import com.yiwp.batmanplusplus.creativetab.BPPCreativeTabs;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 
 import cpw.mods.fml.relauncher.Side;
@@ -36,14 +36,14 @@ public class ExtFluid {
 	    public BlockBPPFluid(Fluid fluid, Material material, String texture) {
 	        super(fluid, material);
 	        this.texture = texture;
-	        this.setCreativeTab(BPPCreativeTab.INSTANCE);
+	        this.setCreativeTab(BPPCreativeTabs.INSTANCE);
 	    }
 	    
 	    public BlockBPPFluid(Fluid fluid, String texture, String metal) {
 	        super(fluid, Material.lava);
 	        this.texture = texture;
 	        this.setBlockName(Names.fluid(metal));
-	        this.setCreativeTab(BPPCreativeTab.INSTANCE);
+	        this.setCreativeTab(BPPCreativeTabs.INSTANCE);
 	    }
 
 	    public BlockBPPFluid(Fluid fluid, Material material, String texture, boolean alpha) {
