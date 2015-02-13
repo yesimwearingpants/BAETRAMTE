@@ -1,15 +1,20 @@
 package com.yiwp.batmanplusplus.block;
-
+/* 
+ * 
+ * 	This Class Is a Part 
+ * 	Tinkers Construct
+ * 	all credit goes to them
+ *  
+ */
 import java.util.List;
 
-import net.minecraft.block.Block;
+import mantle.blocks.MantleBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
-import net.minecraft.world.IBlockAccess;
 
 import com.yiwp.batmanplusplus.creativetab.BPPCreativeTabs;
 import com.yiwp.batmanplusplus.lib.reference.Names;
@@ -18,45 +23,65 @@ import com.yiwp.batmanplusplus.lib.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public abstract class ExtBlock extends Block {
+public abstract class ExtBlock extends MantleBlock {
 	
 	public String[] textureNames;
-	public IIcon[] icons; 
+	public IIcon[] icons;
+	public static float[] hardness;
+	public static float[] resistance;
 	
 	
-	public ExtBlock(Material material, String tex, String name) {
+	public ExtBlock(Material material, String[] tex) {
 		super(material);
 		this.setCreativeTab(BPPCreativeTabs.INSTANCE);
-		this.setBlockName(name);
-		this.setBlockTextureName(Names.block(tex));
+        textureNames = tex;
 	}
+	
+	public ExtBlock(Material material, String tex) {
+		super(material);
+		this.setCreativeTab(BPPCreativeTabs.INSTANCE);
+		this.setBlockName(tex.toLowerCase());
+		this.setBlockTextureName(Names.Textures.block(tex).toLowerCase());
+	}
+	
+	//my attempt at varying hardness with metadata
+	public void hardness() {
+		for (int i = 0; i < hardness.length; ++i) {
+			this.setHardness(hardness[i]);
+		}
+	}
+	
+	public void resistance() {
+		for (int i = 0; i < resistance.length; ++i) {
+			this.setResistance(resistance[i]);
+		}
+	}
+	// cause my compiler doesnt work
 
-	@Override
+    @Override
     public int damageDropped (int meta)
     {
         return meta;
     }
 
-
-
     @Override
-    public String getUnlocalizedName()
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons (IIconRegister iconRegister)
     {
-        return String.format("tile.%s%s", Reference.MODID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        this.icons = new IIcon[textureNames.length];
+
+        for (int i = 0; i < this.icons.length; ++i)
+        {
+            this.icons[i] = iconRegister.registerIcon(Reference.MODID.toLowerCase() + ":" + textureNames[i]);
+        }
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister)
+    public IIcon getIcon (int side, int meta)
     {
-        blockIcon = iconRegister.registerIcon(String.format("%s", getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
+        return meta < icons.length ? icons[meta] : icons[0];
     }
-
-    protected String getUnwrappedUnlocalizedName(String unlocalizedName)
-    {
-        return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
-    }
-
 
     @SideOnly(Side.CLIENT)
     public int getSideTextureIndex (int side)
@@ -78,5 +103,4 @@ public abstract class ExtBlock extends Block {
             list.add(new ItemStack(block, 1, iter));
         }
     }
-    
 }

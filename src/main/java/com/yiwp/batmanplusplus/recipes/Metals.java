@@ -1,6 +1,7 @@
 package com.yiwp.batmanplusplus.recipes;
 
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
@@ -13,7 +14,6 @@ import tconstruct.util.config.PHConstruct;
 
 import com.yiwp.batmanplusplus.fluids.FluidInit;
 import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
-import com.yiwp.batmanplusplus.lib.reference.Names;
 
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -43,7 +43,7 @@ public class Metals {
 				TConstruct.ingotLiquidValue), new FluidStack(TinkerSmeltery.moltenLeadFluid, TConstruct.ingotLiquidValue));
 		}
 		
-		Smeltery.addMelting((new ItemStack(Names.cactus)), 200, new FluidStack(FluidInit.FluidMoltenCactus, gemLiquidValue));
+		Smeltery.addMelting((new ItemStack(Blocks.cactus)), 200, new FluidStack(FluidInit.FluidMoltenCactus, gemLiquidValue));
 		
 	}
 		

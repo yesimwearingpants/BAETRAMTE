@@ -1,5 +1,7 @@
 package com.yiwp.batmanplusplus.block;
 
+import net.minecraft.block.Block;
+
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 
@@ -9,28 +11,25 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class BlockInit {
 	
 	
-	public static MetalBlock BlockMolybdochalkas = new MetalBlock(3.1f, 9.0f, Names.molybdochalkos, Names.block(Names.molybdochalkos));
-	public static MetalBlock BlockOrichalcum = new MetalBlock(3.5f, 9.9f, Names.orichalcum, Names.block(Names.orichalcum));
-	public static MetalBlock BlockCactusSteel = new MetalBlock(0.1f, 0.1f, Names.cactusSteel, Names.block(Names.cactusSteel));
-	public static MetalBlock BlockMeteoricIron = new MetalBlock(11.0f, 35.0f, Names.meteoricIron, Names.block(Names.meteoricIron));
-	public static MetalBlock BlockTetsu = new MetalBlock(11.5f, 35.0f, Names.tetsu, Names.block(Names.tetsu));
-	public static MetalBlock BlockTitanium  = new MetalBlock(10.0f, 30.0f, Names.titanium, Names.block(Names.titanium));
-	public static MetalBlock BlockVibranium = new MetalBlock(20.f, 40.0f, Names.vibranium, Names.block(Names.vibranium));
-	public static MetalBlock BlockAdamantium = new MetalBlock(16.0f, 50.0f, Names.adamantium, Names.block(Names.adamantium));
-	public static MetalBlock BlockTitaniumAlumide = new MetalBlock(7.5f, 25.0f, Names.titaniumAlumide, Names.block(Names.titaniumAlumide));
-	
-	
+	public static ExtBlock BlockMolybdochalkas = new MetalBlock();
+	public static ExtBlock BlockOrichalcum = new MetalBlock();
+	public static ExtBlock BlockMeteoricIron = new MetalBlock();
+	public static ExtBlock BlockTitanium  = new MetalBlock();
+	public static ExtBlock BlockVibranium = new MetalBlock();
+	public static ExtBlock BlockAdamantium = new MetalBlock();
+	public static ExtBlock BlockTetsu = new BlockTetsu(11.5f, 35.0f);
+	public static ExtBlock BlockTitaniumAlumide = new BlockTiAl(7.5f, 25.0f);
+		
 	
 	public static void preInit() {
-		GameRegistry.registerBlock(BlockAdamantium, Names.block(Names.adamantium));
-		GameRegistry.registerBlock(BlockCactusSteel, Names.block(Names.cactusSteel));
-		GameRegistry.registerBlock(BlockMeteoricIron, Names.block(Names.meteoricIron));
-		GameRegistry.registerBlock(BlockMolybdochalkas, Names.block(Names.molybdochalkos));
-		GameRegistry.registerBlock(BlockOrichalcum, Names.block(Names.orichalcum));
-		GameRegistry.registerBlock(BlockTetsu, Names.block(Names.tetsu));
-		GameRegistry.registerBlock(BlockTitanium, Names.block(Names.titanium));
-		GameRegistry.registerBlock(BlockTitaniumAlumide, Names.block(Names.titaniumAlumide));
-		GameRegistry.registerBlock(BlockVibranium, Names.block(Names.vibranium));
+		GameRegistry.registerBlock(BlockAdamantium, Names.Textures.block(Names.adamantium));
+		GameRegistry.registerBlock(BlockMeteoricIron, Names.Textures.block(Names.meteoricIron));
+		GameRegistry.registerBlock(BlockMolybdochalkas, Names.Textures.block(Names.molybdochalkos));
+		GameRegistry.registerBlock(BlockOrichalcum, Names.Textures.block(Names.orichalcum));
+		GameRegistry.registerBlock(BlockTetsu, Names.Textures.block(Names.tetsu));
+		GameRegistry.registerBlock(BlockTitanium, Names.Textures.block(Names.titanium));
+		GameRegistry.registerBlock(BlockTitaniumAlumide, Names.Textures.block(Names.titaniumAlumide));
+		GameRegistry.registerBlock(BlockVibranium, Names.Textures.block(Names.vibranium));
 	}
 
 }

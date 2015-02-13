@@ -9,7 +9,7 @@ import net.minecraft.block.material.Material;
 public class BPPBlock extends ExtBlock	{
 
 	public BPPBlock(Material material, String tex, String name) {
-		super(material, tex , name);
+		super(material, tex);
 		
 	}
 

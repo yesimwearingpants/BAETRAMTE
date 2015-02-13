@@ -5,40 +5,25 @@ import net.minecraftforge.fluids.Fluid;
 
 public class Names {
 		
-	private static String i = "Block";
-	private static String j = "Ingot";
-	private static String k = "Nugget";
-	private static String l = "Fluid";
-
-	public static final String darkIron = "darkIron";	
-	public static final String molybdochalkos = "molybdochalkos";
-	public static final String orichalcum = "orichalcum";
-	public static final String cactusSteel = "cactusSteel";
-	public static final String meteoricIron = "meteoricIron";
-	public static final String tetsu = "tetsu";
-	public static final String titanium = "titanium";
-	public static final String vibranium = "vibranium";
-	public static final String adamantium = "adamantium";
-	public static final String titaniumAlumide = "titaniumAlumide";
+	public static final String darkIron = "DarkIron";	
+	public static final String molybdochalkos = "Molybdochalkos";
+	public static final String orichalcum = "Orichalcum";
+	public static final String cactusSteel = "CactusSteel";
+	public static final String meteoricIron = "MeteoricIron";
+	public static final String tetsu = "Tetsu";
+	public static final String titanium = "Titanium";
+	public static final String vibranium = "Vibranium";
+	public static final String adamantium = "Adamantium";
+	public static final String titaniumAlumide = "TitaniumAlumide";
 			
-	public static String block(String block) {
-		
-		return block + i;
-	}
-	
-	public static String fluids(String fluid) {
-		
-		return fluid + l;
-	}
-	
 	public static String fluid(String metal) {
 		
-		return "fluid.molten." + metal;
+		return "fluid.molten." + metal.toLowerCase();
 	}
 		
 	public static String molten(String metal) {
 
-		return metal + ".molten";				
+		return metal.toLowerCase() + ".molten";				
 	}
 
 	public static String ingot(String ingot) {
@@ -60,18 +45,18 @@ public class Names {
 	public static final class Textures {
 		
 		public static String liquidstill(String tex) {
-			return "liquid_" + tex;
+			return "liquid_" + tex.toLowerCase();
 		}
 		
 		public static String liquidflowing(String tex) {
 			return liquidstill(tex) + "_flow";
 		}
 		public static String block(String tex) {
-			return "block" + tex;
+			return "Block" + tex;
 		}
 		
 		public static String item(String tex) {
-			return "item" + tex;
+			return "Item" + tex;
 		}
 	}
 	

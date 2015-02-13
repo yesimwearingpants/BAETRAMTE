@@ -27,9 +27,6 @@ public class BatmanPlusPlus
 	@SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.SERVER)
 	public static IProxy proxy;
 	
-	@Mod.Metadata
-	public static ModMetadata meta;
-
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)	{
 		

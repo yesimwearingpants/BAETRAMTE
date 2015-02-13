@@ -28,9 +28,8 @@ public class ItemInit {
 	public static final ExtItem nuggetVibranium = new BPPItem(Names.nugget(Names.vibranium));
 	public static final ExtItem nuggetAdamantium = new BPPItem(Names.nugget(Names.adamantium));
 	public static final ExtItem nuggetTitaniumAlumide = new BPPItem(Names.nugget(Names.titaniumAlumide));
-	
-	//Pre-Init
-	public static void init() {
+
+	public static void preInit() {
 		
 		GameRegistry.registerItem(ingotAdamantium, Names.ingot(Names.adamantium));
 		GameRegistry.registerItem(ingotCactusSteel, Names.ingot(Names.cactusSteel));
