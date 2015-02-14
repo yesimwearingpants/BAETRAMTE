@@ -7,6 +7,7 @@ package com.yiwp.batmanplusplus.block;
  *  
  */
 import java.util.List;
+import java.util.Random;
 
 import mantle.blocks.MantleBlock;
 import net.minecraft.block.material.Material;
@@ -62,6 +63,11 @@ public abstract class ExtBlock extends MantleBlock {
     public int damageDropped (int meta)
     {
         return meta;
+    }
+    
+    public int quantityDropped(Random rand)
+    {
+        return 0;
     }
 
     @Override
