@@ -1,4 +1,4 @@
-package com.yiwp.batmanplusplus.fluids;
+package com.yiwp.batmanplusplus.init;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -12,7 +12,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import tconstruct.library.crafting.FluidType;
 
-import com.yiwp.batmanplusplus.block.BlockInit;
+import com.yiwp.batmanplusplus.fluids.ExtFluid;
 import com.yiwp.batmanplusplus.fluids.ExtFluid.BPPFluid;
 import com.yiwp.batmanplusplus.fluids.ExtFluid.BlockBPPFluid;
 import com.yiwp.batmanplusplus.lib.reference.Names;

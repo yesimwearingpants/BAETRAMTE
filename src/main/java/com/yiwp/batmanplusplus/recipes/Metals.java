@@ -12,7 +12,7 @@ import tconstruct.library.crafting.Smeltery;
 import tconstruct.smeltery.TinkerSmeltery;
 import tconstruct.util.config.PHConstruct;
 
-import com.yiwp.batmanplusplus.fluids.FluidInit;
+import com.yiwp.batmanplusplus.init.FluidInit;
 import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
 
 import cpw.mods.fml.common.Loader;

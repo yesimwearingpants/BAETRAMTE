@@ -4,7 +4,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
-import com.yiwp.batmanplusplus.item.ItemInit;
+import com.yiwp.batmanplusplus.init.ItemInit;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

@@ -1,7 +1,11 @@
-package com.yiwp.batmanplusplus.block;
+package com.yiwp.batmanplusplus.init;
 
 import net.minecraft.block.Block;
 
+import com.yiwp.batmanplusplus.block.BlockTetsu;
+import com.yiwp.batmanplusplus.block.BlockTiAl;
+import com.yiwp.batmanplusplus.block.ExtBlock;
+import com.yiwp.batmanplusplus.block.MetalBlock;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 

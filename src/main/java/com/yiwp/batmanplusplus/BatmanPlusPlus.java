@@ -1,8 +1,9 @@
 package com.yiwp.batmanplusplus;
 
-import com.yiwp.batmanplusplus.block.BlockInit;
-import com.yiwp.batmanplusplus.fluids.FluidInit;
-import com.yiwp.batmanplusplus.item.ItemInit;
+import com.yiwp.batmanplusplus.init.BlockInit;
+import com.yiwp.batmanplusplus.init.BotaniaRecipesInit;
+import com.yiwp.batmanplusplus.init.FluidInit;
+import com.yiwp.batmanplusplus.init.ItemInit;
 import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 import com.yiwp.batmanplusplus.lib.utils.LogHelper;
@@ -46,6 +47,7 @@ public class BatmanPlusPlus
     	Metals.addRecipesForSmeltery();
     	Metals.addRecipesForTableCasting();
     	Metals.addRecipesForBasinCasting();
+    	BotaniaRecipesInit.init();
     	
     	LogHelper.warn("##########Initialization Complete##########");
     }

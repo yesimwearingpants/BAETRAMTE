@@ -9,18 +9,18 @@ buildscript {
 		name = "sonatype"
 		url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
-    }
-    dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
-    }
-    maven {
-        name = "Qmunity"
-        url = "http://maven.bluepowermod.com/"
-    }
+	maven {
+		name = "Qmunity"
+		url = "http://maven.bluepowermod.com/"
+	}
 	maven { // The repo from which to get waila
 		name "Mobius Repo"
 		url "http://mobiusstrip.eu/maven"
 	}
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+    }
 }
 
 apply plugin: 'forge'
@@ -29,12 +29,12 @@ apply plugin: 'eclipse'
 
 
 version = "1.0"
-group= "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group= "com.yiwp.batmanplusplus" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "modid"
 
 minecraft {
     version = "1.7.10-10.13.2.1291"
-    runDir = "eclipse"
+    runDir = "idea"
 
 	replaceIn "reference/Reference.java"
 	replace "@VERSION@", project.version
@@ -78,14 +78,10 @@ dependencies {
     compile "codechicken:NotEnoughItems:1.0.4.83:dev"
     compile "codechicken:ForgeMultipart:1.7.10-1.1.1.321:dev"
     compile "tconstruct:TConstruct:1.7.10-1.8.2.build880:deobf"
-    compile "natura:Natura:1.7.10-98.6a6cca1:deobf"
     compile "codechicken:EnderStorage:1.7.10-1.4.5.22:dev"
     compile "mantle:Mantle:1.7.10-0.3.2.jenkins187:deobf"
-    compile 'com.mod-buildcraft:buildcraft:6.3.4:dev'
     //compile group: 'thermalexpansion', name: 'ThermalExpansion', version: config.texpan.version, ext: 'jar'
     //compile group: 'cofh', name: 'CoFHCore', version: config.cofh.version, ext: 'jar'
-    compile "appeng:appliedenergistics2:rv2-beta-8:dev"
-    compile "qmunity:QmunityLib:0.1.78:deobf"
 
 }
 
