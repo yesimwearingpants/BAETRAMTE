@@ -1,15 +1,9 @@
 package com.yiwp.batmanplusplus.block;
-/* 
- * 
- * 	This Class Is a Part 
- * 	Tinkers Construct
- * 	all credit goes to them
- *  
- */
+
 import java.util.List;
 import java.util.Random;
 
-import mantle.blocks.MantleBlock;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -24,7 +18,7 @@ import com.yiwp.batmanplusplus.lib.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public abstract class ExtBlock extends MantleBlock {
+public abstract class ExtBlock extends Block {
 	
 	public String[] textureNames;
 	public IIcon[] icons;
@@ -51,47 +45,45 @@ public abstract class ExtBlock extends MantleBlock {
 			this.setHardness(hardness[i]);
 		}
 	}
-	
+	// and resistance
 	public void resistance() {
 		for (int i = 0; i < resistance.length; ++i) {
 			this.setResistance(resistance[i]);
 		}
 	}
-	// cause my compiler doesnt work
+	// cause my compiler errors
 
     @Override
-    public int damageDropped (int meta)
-    {
+    public int damageDropped (int meta) {
         return meta;
     }
     
-    public int quantityDropped(Random rand)
-    {
-        return 0;
-    }
-
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons (IIconRegister iconRegister)
-    {
-        this.icons = new IIcon[textureNames.length];
+    public void registerBlockIcons (IIconRegister iconRegister) {
+        icons = new IIcon[textureNames.length];
 
-        for (int i = 0; i < this.icons.length; ++i)
-        {
+        for (int i = 0; i < textureNames.length; ++i) {
             this.icons[i] = iconRegister.registerIcon(Reference.MODID.toLowerCase() + ":" + textureNames[i]);
         }
     }
-
+    
+	// TODO getSubBlocks
+	@Override
+	    public void getSubBlocks (Item block, CreativeTabs tab, List list) {
+	    for (int i = 0; i < textureNames.length; i++) {
+	    	list.add(new ItemStack(block, 1, i));
+	    }
+	}
+	    
     @Override
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon (int side, int meta)
-    {
-        return meta < icons.length ? icons[meta] : icons[0];
+    public IIcon getIcon (int side, int meta) {
+        return icons[meta];
     }
 
     @SideOnly(Side.CLIENT)
-    public int getSideTextureIndex (int side)
-    {
+    public int getSideTextureIndex (int side) {
         if (side == 0)
             return 2;
         if (side == 1)
@@ -100,13 +92,5 @@ public abstract class ExtBlock extends MantleBlock {
         return 1;
     }
 
-    // TODO getSubBlocks
-    @Override
-    public void getSubBlocks (Item block, CreativeTabs tab, List list)
-    {
-        for (int iter = 0; iter < icons.length; iter++)
-        {
-            list.add(new ItemStack(block, 1, iter));
-        }
-    }
+    
 }

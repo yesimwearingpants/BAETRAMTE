@@ -1,11 +1,5 @@
 package com.yiwp.batmanplusplus.block;
-/* 
- * 
- * 	This Class Is a Part 
- * 	Tinkers Construct
- * 	all credit goes to them
- *  
- */
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.IIcon;
@@ -19,11 +13,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class MetalBlock extends ExtBlock {
 	
-	private static final String c = "compressed_";
+	private static final String c = "block-";
 	
 	protected float[] hardness = ExtBlock.hardness = new float[] { 16.0f, 11.0f, 3.1f, 3.5f, 10.0f, 20.f};
 	
-	static String[] metalTypes = new String[] { c + Names.adamantium.toLowerCase(), c + Names.meteoricIron.toLowerCase(),
+	static final String[] metalTypes = new String[] { c + Names.adamantium.toLowerCase(), c + Names.meteoricIron.toLowerCase(),
 		c + Names.molybdochalkos.toLowerCase(), c + Names.orichalcum.toLowerCase(), c + Names.titanium.toLowerCase(),
 		c + Names.vibranium};
 	
