@@ -74,7 +74,7 @@ public class BPPCreativeTabs {
         @SideOnly(Side.CLIENT)
         public String getBackgroundImageName() {
 
-            return searchbar ? "bp_search.png" : super.getBackgroundImageName();
+            return searchbar ? "item_search.png" : super.getBackgroundImageName();
         }
 
         @Override

@@ -25,7 +25,7 @@ public class ExtItemBlock extends ItemBlock {
 		if (i < 0 || i >= textureNames.length) {
 			i = 0;
 		}
-		return super.getUnlocalizedName() + "." + textureNames[i];
+		return super.getUnlocalizedName() + textureNames[i];
 	}
 	
 	@Override

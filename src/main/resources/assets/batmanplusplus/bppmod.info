@@ -1,0 +1,16 @@
+[
+{
+  "modid": "BATMAN++",
+  "name": "Botania ArsMagica Thaumcraft Metallurgy AppliedEnergistics N.More",
+  "description": "An Tech Magic Integration Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SomeNoNameModder"],
+  "credits": "Vazkii, Azanor, mDiyo & the SlimeKnights, Team Metallurgy, AlgorithimX2, JadedCat (I was working on a modpack with minetweaker and realized in order to do what I wanted it was easier to just write a mod",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

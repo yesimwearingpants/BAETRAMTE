@@ -3,14 +3,21 @@ package com.yiwp.batmanplusplus.block;
 import java.util.Random;
 
 import com.yiwp.batmanplusplus.lib.reference.Names;
+import com.yiwp.batmanplusplus.lib.reference.Reference;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockGlass;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.util.IIcon;
 
 public class BlockCactusSteel extends ExtBlock {
 
-	public BlockCactusSteel() {
+	public BlockCactusSteel(float h, float r) {
 		super(Material.iron, Names.cactusSteel);
+		this.setHardness(h);
+		this.setResistance(r);
 	}
 	
 	@Override
@@ -23,6 +30,12 @@ public class BlockCactusSteel extends ExtBlock {
     protected boolean canSilkHarvest()
     {
         return false;
+    }
+	
+	@Override
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons (IIconRegister iconRegister) {
+		blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(5));
     }
 
 }

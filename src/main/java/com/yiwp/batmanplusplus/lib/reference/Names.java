@@ -52,11 +52,11 @@ public class Names {
 			return liquidstill(tex) + "_flow";
 		}
 		public static String block(String tex) {
-			return "Block" + tex;
+			return "block" + tex;
 		}
 		
 		public static String item(String tex) {
-			return "Item" + tex;
+			return "item" + tex;
 		}
 	}
 	
