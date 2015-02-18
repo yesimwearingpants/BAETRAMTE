@@ -46,7 +46,6 @@ public class MetalBlock extends ExtBlock {
         }
     }
     
-	// TODO getSubBlocks
 	@Override
 	    public void getSubBlocks (Item block, CreativeTabs tab, List list) {
 	    for (int i = 0; i < textureNames.length; i++) {

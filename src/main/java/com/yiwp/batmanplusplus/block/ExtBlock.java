@@ -24,37 +24,34 @@ public abstract class ExtBlock extends Block {
 	IIcon[] icons;
 	public static float[] hardness;
 	public static float[] resistance;
-	
-	
+
 	public ExtBlock(Material material, String[] tex) {
 		super(material);
 		this.setBlockName(Reference.MODID + ":");
 		this.setCreativeTab(BPPCreativeTabs.INSTANCE);
         textureNames = tex;
 	}
-	
+
 	public ExtBlock(Material material, String tex) {
 		super(material);
 		this.setCreativeTab(BPPCreativeTabs.INSTANCE);
 		this.setBlockName(Reference.MODID + ":" + Names.Textures.block(tex));
 		this.setBlockTextureName(Names.Textures.block(tex));
 	}
-	
-	//my attempt at varying hardness with metadata
+
 	public void hardness() {
 		for (int i = 0; i < hardness.length; ++i) {
 			this.setHardness(hardness[i]);
 		}
 	}
-	// and resistance
+
 	public void resistance() {
 		for (int i = 0; i < resistance.length; ++i) {
 			this.setResistance(resistance[i]);
 		}
 	}
-	// cause my compiler errors
 
-    @SideOnly(Side.CLIENT)
+	@SideOnly(Side.CLIENT)
     public int getSideTextureIndex (int side) {
         if (side == 0)
             return 2;
