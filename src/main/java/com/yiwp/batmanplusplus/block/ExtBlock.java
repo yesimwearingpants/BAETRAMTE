@@ -20,16 +20,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public abstract class ExtBlock extends Block {
 	
-	String[] textureNames;
-	IIcon[] icons;
-	public static float[] hardness;
-	public static float[] resistance;
-
-	public ExtBlock(Material material, String[] tex) {
+	public ExtBlock(Material material) {
 		super(material);
 		this.setBlockName(Reference.MODID + ":");
 		this.setCreativeTab(BPPCreativeTabs.INSTANCE);
-        textureNames = tex;
 	}
 
 	public ExtBlock(Material material, String tex) {
@@ -37,18 +31,6 @@ public abstract class ExtBlock extends Block {
 		this.setCreativeTab(BPPCreativeTabs.INSTANCE);
 		this.setBlockName(Reference.MODID + ":" + Names.Textures.block(tex));
 		this.setBlockTextureName(Names.Textures.block(tex));
-	}
-
-	public void hardness() {
-		for (int i = 0; i < hardness.length; ++i) {
-			this.setHardness(hardness[i]);
-		}
-	}
-
-	public void resistance() {
-		for (int i = 0; i < resistance.length; ++i) {
-			this.setResistance(resistance[i]);
-		}
 	}
 
 	@SideOnly(Side.CLIENT)

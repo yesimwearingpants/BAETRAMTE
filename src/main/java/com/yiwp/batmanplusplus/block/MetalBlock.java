@@ -6,49 +6,58 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
 public class MetalBlock extends ExtBlock {
-	
-	private static final String c = "block";
-	
-	protected float[] hardness = ExtBlock.hardness = new float[] { 16.0f, 11.0f, 3.1f, 3.5f, 10.0f, 20.f};
-	
-	static final String[] metalTypes = new String[] { c + Names.adamantium, c + Names.meteoricIron, c + Names.molybdochalkos,
-		c + Names.orichalcum, c + Names.titanium, c + Names.vibranium};
-	
-	private static float[] resistance = ExtBlock.resistance = new float[] { 50.0f, 35.0f, 9.0f, 9.9f, 30.0f, 40.0f};
 
+	static final String[] metalTypes = new String[] { Names.adamantium, Names.meteoricIron,
+	Names.molybdochalkos, Names.orichalcum, Names.titanium, Names.vibranium, Names.slag};
+    private IIcon[] icons = new IIcon[metalTypes.length];	
+	protected float[] hardness = new float[] { 16.0f, 11.0f, 3.1f, 3.5f, 10.0f, 20.f, 10.5f};
+	private static float[] resistance = new float[] { 50.0f, 35.0f, 9.0f, 9.9f, 30.0f, 40.0f, 8.0f};
+	
 	public MetalBlock() {
-		super(Material.iron, metalTypes);
+		super(Material.iron);
 		this.setStepSound(Block.soundTypeMetal);
-			
+		this.setHardness(16.0f);
+		this.setResistance(35.0f);
 	}
 	
 	@Override
+	public float getBlockHardness(World world, int x, int y, int z) {
+
+		return hardness[world.getBlockMetadata(x, y, z)];
+	}
+
+	@Override
+	public float getExplosionResistance(Entity entity, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ) {
+
+		return resistance[world.getBlockMetadata(x, y, z)];
+	}
+
+	@Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons (IIconRegister iconRegister) {
-        icons = new IIcon[textureNames.length];
-
-        for (int i = 0; i < textureNames.length; ++i) {
-            icons[i] = iconRegister.registerIcon(Reference.MODID.toLowerCase() + ":" + textureNames[i]);
+        for (int i = 0; i < metalTypes.length; ++i) {
+            icons[i] = iconRegister.registerIcon(Reference.MODID.toLowerCase() + ":" + Names.Textures.block(metalTypes[i]));
         }
     }
     
 	@Override
 	    public void getSubBlocks (Item block, CreativeTabs tab, List list) {
-	    for (int i = 0; i < textureNames.length; i++) {
+	    for (int i = 0; i < metalTypes.length; i++) {
 	    	list.add(new ItemStack(block, 1, i));
 	    }
 	}

@@ -34,7 +34,7 @@ archivesBaseName = "modid"
 
 minecraft {
     version = "1.7.10-10.13.2.1291"
-    runDir = "idea"
+    runDir = "eclipse"
 
 	replaceIn "reference/Reference.java"
 	replace "@VERSION@", project.version
