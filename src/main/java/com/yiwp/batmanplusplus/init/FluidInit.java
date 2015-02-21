@@ -12,9 +12,10 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import tconstruct.library.crafting.FluidType;
 
-import com.yiwp.batmanplusplus.fluids.ExtFluid;
-import com.yiwp.batmanplusplus.fluids.ExtFluid.BPPFluid;
-import com.yiwp.batmanplusplus.fluids.ExtFluid.BlockBPPFluid;
+import com.yiwp.batmanplusplus.block.fluid.BlockExtFluid;
+import com.yiwp.batmanplusplus.block.fluid.BlockExtFluid.BlockMetalFluid;
+import com.yiwp.batmanplusplus.block.fluid.ExtFluid.CactusFluid;
+import com.yiwp.batmanplusplus.block.fluid.ExtFluid.MetalFluid;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 
@@ -23,32 +24,42 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @GameRegistry.ObjectHolder(Reference.MODID)
 public class FluidInit {
 	
-	public static Item buckets;
+	static Item buckets;
 	
-	public static Fluid FluidDarkIron = new BPPFluid();
-	public static Block BlockMoltenDarkIron = new BlockBPPFluid(FluidDarkIron, Names.Textures.liquidstill(Names.darkIron), Names.darkIron);
-	public static Fluid FluidMolybdochalkos = new BPPFluid();
-	public static Block BlockMoltenMolybdochalkos = new BlockBPPFluid(FluidMolybdochalkos, Names.Textures.liquidstill(Names.molybdochalkos), Names.molybdochalkos);
-	public static Fluid FluidOrichalcum = new BPPFluid();
-	public static Block BlockMoltenOrichalcum = new BlockBPPFluid(FluidOrichalcum, Names.Textures.liquidstill(Names.orichalcum), Names.orichalcum);
-	public static Fluid FluidMoltenCactus = new BPPFluid();
-	public static Block BlockMoltenCactus = new BlockBPPFluid(FluidMoltenCactus, "liquid_water", "cactusJuice");
-	public static Fluid FluidCactusSteel = new BPPFluid();
-	public static Block BlockMoltenCactusSteel = new BlockBPPFluid(FluidCactusSteel, Names.Textures.liquidstill(Names.cactusSteel), Names.cactusSteel);
-	public static Fluid FluidMeteoricIron = new BPPFluid();
-	public static Block BlockMoltenMeteoricIron = new BlockBPPFluid(FluidMeteoricIron, Names.Textures.liquidstill(Names.meteoricIron), Names.meteoricIron);
-	public static Fluid FluidTitanium = new BPPFluid();
-	public static Block BlockMoltenTitanium = new BlockBPPFluid(FluidTitanium, Names.Textures.liquidstill(Names.titanium), Names.titanium);
-	public static Fluid FluidVibranium = new BPPFluid();
-	public static Block BlockMoltenVibranium = new BlockBPPFluid(FluidVibranium, Names.Textures.liquidstill(Names.vibranium), Names.vibranium);
-	public static Fluid FluidAdamantium = new BPPFluid();
-	public static Block BlockMoltenAdamantium = new BlockBPPFluid(FluidAdamantium, Names.Textures.liquidstill(Names.adamantium), Names.adamantium);
-	public static Fluid FluidTitaniumAlumide = new BPPFluid();
-	public static Block BlockMoltenTitaniumAlumide = new BlockBPPFluid(FluidTitaniumAlumide, Names.Textures.liquidstill(Names.titaniumAlumide), Names.titaniumAlumide);
+	//static Fluid FluidMoltenCactus = new CactusFluid();
+	static Fluid FluidAdamantium = new MetalFluid();
+	static Fluid FluidCactusSteel = new MetalFluid();
+	static Fluid FluidMeteoricIron = new MetalFluid();
+	static Fluid FluidMolybdochalkos = new MetalFluid();
+	static Fluid FluidOrichalcum = new MetalFluid();
+	static Fluid FluidTitanium = new MetalFluid();
+	static Fluid FluidVibranium = new MetalFluid();
+	static Fluid FluidTitaniumAlumide = new MetalFluid();
+	static Fluid FluidDarkIron = new MetalFluid();
+	static Block BlockMoltenDarkIron = new BlockMetalFluid(FluidDarkIron, Names.darkIron);
+	static Block BlockMoltenMolybdochalkos = new BlockMetalFluid(FluidMolybdochalkos, Names.molybdochalkos);
+	static Block BlockMoltenOrichalcum = new BlockMetalFluid(FluidOrichalcum, Names.orichalcum);
+	static Block BlockMoltenCactusSteel = new BlockMetalFluid(FluidCactusSteel, Names.cactusSteel);
+	static Block BlockMoltenMeteoricIron = new BlockMetalFluid(FluidMeteoricIron, Names.meteoricIron);
+	static Block BlockMoltenTitanium = new BlockMetalFluid(FluidTitanium, Names.titanium);
+	static Block BlockMoltenVibranium = new BlockMetalFluid(FluidVibranium, Names.vibranium);
+	static Block BlockMoltenAdamantium = new BlockMetalFluid(FluidAdamantium, Names.adamantium);
+	static Block BlockMoltenTitaniumAlumide = new BlockMetalFluid(FluidTitaniumAlumide, Names.titaniumAlumide);
 	
-	
-	public static void preInit() {
-	
+	public static boolean preInit() {
+
+		FluidRegistry.registerFluid(FluidDarkIron);
+		FluidRegistry.registerFluid(FluidTitaniumAlumide);
+		FluidRegistry.registerFluid(FluidVibranium);
+		FluidRegistry.registerFluid(FluidTitanium);
+		FluidRegistry.registerFluid(FluidOrichalcum);
+		FluidRegistry.registerFluid(FluidMolybdochalkos);
+		FluidRegistry.registerFluid(FluidMeteoricIron);
+		FluidRegistry.registerFluid(FluidCactusSteel);
+		FluidRegistry.registerFluid(FluidAdamantium);
+		FluidRegistry.registerFluid(FluidAdamantium);
+		//FluidRegistry.registerFluid(FluidMoltenCactus);
+		
 		boolean isDarkIronPreReg = !FluidRegistry.registerFluid(FluidDarkIron);
 	    GameRegistry.registerBlock(BlockMoltenDarkIron, Names.fluid(Names.darkIron));
 	    if (isDarkIronPreReg)
@@ -57,7 +68,7 @@ public class FluidInit {
 	        Block regBlockMoltenDarkIron = FluidDarkIron.getBlock();
 	        if (regBlockMoltenDarkIron != null)
 	        {
-	            ((BlockBPPFluid) BlockMoltenDarkIron).suppressOverwritingFluidIcons();
+	            ((BlockExtFluid) BlockMoltenDarkIron).suppressOverwritingFluidIcons();
 	            BlockMoltenDarkIron = regBlockMoltenDarkIron;
 	        }
 	        else
@@ -75,7 +86,7 @@ public class FluidInit {
 	        Block regBlockMoltenMolybdochalkos = FluidMolybdochalkos.getBlock();
 	        if (regBlockMoltenMolybdochalkos != null)
 	        {
-	            ((BlockBPPFluid) BlockMoltenMolybdochalkos).suppressOverwritingFluidIcons();
+	            ((BlockExtFluid) BlockMoltenMolybdochalkos).suppressOverwritingFluidIcons();
 	            BlockMoltenMolybdochalkos = regBlockMoltenMolybdochalkos;
 	        }
 	        else
@@ -93,7 +104,7 @@ public class FluidInit {
 	        Block regBlockMoltenOrichalcum = FluidOrichalcum.getBlock();
 	        if (regBlockMoltenOrichalcum != null)
 	        {
-	            ((BlockBPPFluid) BlockMoltenOrichalcum).suppressOverwritingFluidIcons();
+	            ((BlockExtFluid) BlockMoltenOrichalcum).suppressOverwritingFluidIcons();
 	            BlockMoltenOrichalcum = regBlockMoltenOrichalcum;
 	        }
 	        else
@@ -111,7 +122,7 @@ public class FluidInit {
 	        Block regBlockMoltenCactusSteel = FluidCactusSteel.getBlock();
 	        if (regBlockMoltenCactusSteel != null)
 	        {
-	            ((BlockBPPFluid) BlockMoltenCactusSteel).suppressOverwritingFluidIcons();
+	            ((BlockExtFluid) BlockMoltenCactusSteel).suppressOverwritingFluidIcons();
 	            BlockMoltenCactusSteel = regBlockMoltenCactusSteel;
 	        }
 	        else
@@ -129,7 +140,7 @@ public class FluidInit {
 	        Block regBlockMoltenMeteoricIron = FluidMeteoricIron.getBlock();
 	        if (regBlockMoltenMeteoricIron != null)
 	        {
-	            ((BlockBPPFluid) BlockMoltenMeteoricIron).suppressOverwritingFluidIcons();
+	            ((BlockExtFluid) BlockMoltenMeteoricIron).suppressOverwritingFluidIcons();
 	            BlockMoltenMeteoricIron = regBlockMoltenMeteoricIron;
 	        }
 	        else
@@ -147,7 +158,7 @@ public class FluidInit {
 	        Block regBlockMoltenTitanium = FluidTitanium.getBlock();
 	        if (regBlockMoltenTitanium != null)
 	        {
-	            ((BlockBPPFluid) BlockMoltenTitanium).suppressOverwritingFluidIcons();
+	            ((BlockExtFluid) BlockMoltenTitanium).suppressOverwritingFluidIcons();
 	            BlockMoltenTitanium = regBlockMoltenTitanium;
 	        }
 	        else
@@ -165,7 +176,7 @@ public class FluidInit {
 	        Block regBlockMoltenVibranium = FluidVibranium.getBlock();
 	        if (regBlockMoltenVibranium != null)
 	        {
-	            ((BlockBPPFluid) BlockMoltenVibranium).suppressOverwritingFluidIcons();
+	            ((BlockExtFluid) BlockMoltenVibranium).suppressOverwritingFluidIcons();
 	            BlockMoltenVibranium = regBlockMoltenVibranium;
 	        }
 	        else
@@ -183,7 +194,7 @@ public class FluidInit {
 	        Block regBlockMoltenAdamantium = FluidAdamantium.getBlock();
 	        if (regBlockMoltenAdamantium != null)
 	        {
-	            ((BlockBPPFluid) BlockMoltenAdamantium).suppressOverwritingFluidIcons();
+	            ((BlockExtFluid) BlockMoltenAdamantium).suppressOverwritingFluidIcons();
 	            BlockMoltenAdamantium = regBlockMoltenAdamantium;
 	        }
 	        else
@@ -201,7 +212,7 @@ public class FluidInit {
 	        Block regBlockMoltenTitaniumAlumide = FluidTitaniumAlumide.getBlock();
 	        if (regBlockMoltenTitaniumAlumide != null)
 	        {
-	            ((BlockBPPFluid) BlockMoltenTitaniumAlumide).suppressOverwritingFluidIcons();
+	            ((BlockExtFluid) BlockMoltenTitaniumAlumide).suppressOverwritingFluidIcons();
 	            BlockMoltenTitaniumAlumide = regBlockMoltenTitaniumAlumide;
 	        }
 	        else
@@ -211,26 +222,10 @@ public class FluidInit {
 	        FluidContainerRegistry.registerFluidContainer(new FluidContainerData(new FluidStack(FluidTitaniumAlumide, 1000), new ItemStack
 	        		(buckets, 1, 2), new ItemStack(Items.bucket)));
 
-	    boolean isCactusPreReg = !FluidRegistry.registerFluid(FluidMoltenCactus);
-	    GameRegistry.registerBlock(BlockMoltenCactus, "fluid.molten.cactus");
-	    if (isCactusPreReg)
-	    {
-	    	FluidMoltenCactus = FluidRegistry.getFluid("cactus.molten");
-	        Block regBlockMoltenCactus = FluidMoltenCactus.getBlock();
-	        if (regBlockMoltenCactus != null)
-	        {
-	            ((BlockBPPFluid) BlockMoltenCactus).suppressOverwritingFluidIcons();
-	            BlockMoltenCactus = regBlockMoltenCactus;
-	        }
-	        else
-	            FluidMoltenCactus.setBlock(BlockMoltenCactus);
-	    }
-	    if (FluidContainerRegistry.fillFluidContainer(new FluidStack(FluidMoltenCactus, 1000), new ItemStack(Items.bucket)) == null)
-	        FluidContainerRegistry.registerFluidContainer(new FluidContainerData(new FluidStack(FluidMoltenCactus, 1000), new ItemStack
-	        		(buckets, 1, 2), new ItemStack(Items.bucket)));
-
-	    FluidType.registerFluidType(Names.adamantium, BlockInit.BlockAdamantium, 0, 900, FluidAdamantium, true);
-	    FluidType.registerFluidType(Names.cactusSteel, Blocks.cactus, 0, 650, FluidCactusSteel, true);
+	    FluidType.registerFluidType(Names.cactusSteel, Blocks.cactus, 0, 650, FluidMoltenCactus, false);
+	    FluidType.registerFluidType(Names.adamantium, BlockInit.BlockMetaMetal, 0, 900, FluidAdamantium, true);
+		
+		return true;
 	}
 
 }
