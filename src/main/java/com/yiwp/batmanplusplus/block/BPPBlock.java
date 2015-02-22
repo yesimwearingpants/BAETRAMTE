@@ -16,9 +16,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
 public class BPPBlock extends ExtBlock	{
+	
+	static final String[] textureNames = {};
+	private IIcon[] icons = new IIcon[textureNames.length];
 
-	public BPPBlock(Material material, String tex, String name) {
-		super(material, tex);
+	public BPPBlock(Material material) {
+		super(material);
 		
 	}
 	

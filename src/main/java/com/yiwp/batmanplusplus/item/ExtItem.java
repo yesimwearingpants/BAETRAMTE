@@ -42,7 +42,7 @@ public class ExtItem extends Item {
 		
 		public BPPItem(String unlocal) {
 			super();
-			this.setUnlocalizedName(unlocal.toLowerCase());
+			this.setUnlocalizedName(unlocal);
 			
 		}
 		

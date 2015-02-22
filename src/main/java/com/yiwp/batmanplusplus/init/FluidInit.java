@@ -1,6 +1,6 @@
 package com.yiwp.batmanplusplus.init;
 
-import net.minecraft.block.Block;
+/*import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -19,14 +19,14 @@ import com.yiwp.batmanplusplus.block.fluid.ExtFluid.MetalFluid;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 
-import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;*/
 
-@GameRegistry.ObjectHolder(Reference.MODID)
+//@GameRegistry.ObjectHolder(Reference.MODID)
 public class FluidInit {
 	
-	static Item buckets;
+/*	static Item buckets;
 	
-	//static Fluid FluidMoltenCactus = new CactusFluid();
+	static Fluid FluidMoltenCactus = new CactusFluid();
 	static Fluid FluidAdamantium = new MetalFluid();
 	static Fluid FluidCactusSteel = new MetalFluid();
 	static Fluid FluidMeteoricIron = new MetalFluid();
@@ -58,7 +58,7 @@ public class FluidInit {
 		FluidRegistry.registerFluid(FluidCactusSteel);
 		FluidRegistry.registerFluid(FluidAdamantium);
 		FluidRegistry.registerFluid(FluidAdamantium);
-		//FluidRegistry.registerFluid(FluidMoltenCactus);
+		FluidRegistry.registerFluid(FluidMoltenCactus);
 		
 		boolean isDarkIronPreReg = !FluidRegistry.registerFluid(FluidDarkIron);
 	    GameRegistry.registerBlock(BlockMoltenDarkIron, Names.fluid(Names.darkIron));
@@ -226,6 +226,6 @@ public class FluidInit {
 	    FluidType.registerFluidType(Names.adamantium, BlockInit.BlockMetaMetal, 0, 900, FluidAdamantium, true);
 		
 		return true;
-	}
+	}*/
 
 }

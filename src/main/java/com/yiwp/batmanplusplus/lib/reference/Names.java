@@ -15,6 +15,8 @@ public class Names {
 	public static final String vibranium = "Vibranium";
 	public static final String adamantium = "Adamantium";
 	public static final String titaniumAlumide = "TitaniumAlumide";
+	public static final String slag = "Slag";
+	public static final String board = "PressBoard";
 			
 	public static String fluid(String metal) {
 		
@@ -27,11 +29,11 @@ public class Names {
 	}
 
 	public static String ingot(String ingot) {
-		return ingot + "Ingot";
+		return "ingot" + ingot;
 	}
 
 	public static String nugget(String nugget) {
-		return nugget + "Nugget";
+		return "nugget" + nugget;
 	}
 	
 	public static final class Blocks {
@@ -45,11 +47,11 @@ public class Names {
 	public static final class Textures {
 		
 		public static String liquidstill(String tex) {
-			return "liquid_" + tex.toLowerCase();
+			return "fluid" + tex.toLowerCase();
 		}
 		
 		public static String liquidflowing(String tex) {
-			return liquidstill(tex) + "_flow";
+			return liquidstill(tex) + "-flow";
 		}
 		public static String block(String tex) {
 			return "block" + tex;
@@ -84,6 +86,7 @@ public class Names {
 		
 		public static final String Catagory1 = "############Modules###########";
 		public static final String Catagory2 = "#####One-Stop Config-Shop#####";
+		public static final String Catagory3 = "############Extras############";
 	}
 
 }

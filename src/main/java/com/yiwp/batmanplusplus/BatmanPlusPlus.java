@@ -1,5 +1,6 @@
 package com.yiwp.batmanplusplus;
 
+import com.yiwp.batmanplusplus.init.BiomeInit;
 import com.yiwp.batmanplusplus.init.BlockInit;
 import com.yiwp.batmanplusplus.init.FluidInit;
 import com.yiwp.batmanplusplus.init.ItemInit;
@@ -34,6 +35,7 @@ public class BatmanPlusPlus
 		BlockInit.preInit();
 		ItemInit.preInit();
 		//FluidInit.preInit();
+		BiomeInit.preInit();
 		LogHelper.info("##########Pre Initialization Complete##########");
 		
 	}

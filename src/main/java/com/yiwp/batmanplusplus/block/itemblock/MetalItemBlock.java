@@ -12,10 +12,9 @@ import net.minecraft.util.StatCollector;
 
 public class MetalItemBlock extends ExtItemBlock {
 
-	private static final String c = "block";	
 	static final String[] metalTypes = new String[] { Names.adamantium.toLowerCase(), Names.meteoricIron.toLowerCase(),
 		Names.molybdochalkos.toLowerCase(), Names.orichalcum.toLowerCase(), Names.titanium.toLowerCase(),
-		Names.vibranium.toLowerCase()};
+		Names.vibranium.toLowerCase(), Names.slag.toLowerCase()};
 
 	public MetalItemBlock(Block b) {
 		super(b, metalTypes);

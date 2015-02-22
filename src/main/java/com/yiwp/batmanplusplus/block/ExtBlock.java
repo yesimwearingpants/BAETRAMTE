@@ -20,12 +20,14 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public abstract class ExtBlock extends Block {
 	
+	//Metadata
 	public ExtBlock(Material material) {
 		super(material);
 		this.setBlockName(Reference.MODID + ":");
 		this.setCreativeTab(BPPCreativeTabs.INSTANCE);
 	}
 
+	//Non-Metadata
 	public ExtBlock(Material material, String tex) {
 		super(material);
 		this.setCreativeTab(BPPCreativeTabs.INSTANCE);

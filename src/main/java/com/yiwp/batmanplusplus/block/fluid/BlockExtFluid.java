@@ -1,17 +1,16 @@
 package com.yiwp.batmanplusplus.block.fluid;
 
-import java.util.List;
-
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.IIcon;
-import net.minecraftforge.fluids.BlockFluidClassic;
+import net.minecraft.world.World;
+import net.minecraftforge.fluids.BlockFluidFinite;
 import net.minecraftforge.fluids.Fluid;
 
-import com.yiwp.batmanplusplus.block.ExtBlock;
 import com.yiwp.batmanplusplus.creativetab.BPPCreativeTabs;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
@@ -19,7 +18,7 @@ import com.yiwp.batmanplusplus.lib.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockExtFluid extends BlockFluidClassic {
+public class BlockExtFluid extends BlockFluidFinite {
 	
 	public static class BlockBPPFluid extends BlockExtFluid {
 		
@@ -74,6 +73,21 @@ public class BlockExtFluid extends BlockFluidClassic {
     @Override
     public int getRenderBlockPass () {
         return alpha ? 1 : 0;
+    }
+    
+    @Override
+    public void onEntityCollidedWithBlock (World par1World, int x, int y, int z, Entity entity)
+    {
+        if (entity instanceof EntityLivingBase)
+        {
+            entity.motionX *= 0.4D;
+            entity.motionZ *= 0.4D;
+        }
+        if (!(entity instanceof EntityItem) && !entity.isImmuneToFire())
+        {
+            entity.attackEntityFrom(DamageSource.lava, 4.0F);
+            entity.setFire(15);
+        }
     }
 
 }
