@@ -1,6 +1,7 @@
 #my Stuff
 /.settings
 /eclipse
+/src2
 *.class
 #ant stuff
 /bin/
