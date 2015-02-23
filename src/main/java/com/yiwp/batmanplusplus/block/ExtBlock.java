@@ -11,6 +11,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Facing;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 
 import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;

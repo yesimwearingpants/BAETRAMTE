@@ -20,7 +20,8 @@ public class BlockInit {
 	public static ExtBlock BlockTitaniumAlumide = new BlockTiAl(7.5f, 25.0f);
 	public static ExtBlock BlockCactusSteel = new BlockCactusSteel(0.1f, 0.1f);
 	public static ExtBlock BlockPressBoard = new BlockPressBoard();
-	public static ExtBlock BlockLux = new LuxBlock();
+	public static ExtBlock BlockLux = new LuxBlock("clear", false);
+	public static ExtBlock PaneLux = new LuxPane("clear", false);
 	public static ExtBlock BlockOre = new OreBlock();
 	
 	public static void preInit() {
@@ -28,7 +29,8 @@ public class BlockInit {
 		GameRegistry.registerBlock(BlockTitaniumAlumide, Names.Textures.block(Names.titaniumAlumide));
 		GameRegistry.registerBlock(BlockCactusSteel, Names.Textures.block(Names.cactusSteel));
 		GameRegistry.registerBlock(BlockPressBoard, Names.Textures.block(Names.board));
-		GameRegistry.registerBlock(BlockLux, LuxItemBlock.class, "blockLux");
+		GameRegistry.registerBlock(BlockLux, "blockLux");
+		GameRegistry.registerBlock(PaneLux, "paneLux");
 		GameRegistry.registerBlock(BlockMetaMetal, MetalItemBlock.class, "blockMetal");
 		GameRegistry.registerBlock(BlockOre, OreItemBlock.class, "blockOre");
 	}
