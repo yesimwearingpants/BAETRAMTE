@@ -28,7 +28,7 @@ apply plugin: 'maven'
 apply plugin: 'eclipse'
 
 
-version = "1.0"
+version = "0.0.0.02"
 group= "com.yiwp.batmanplusplus" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "modid"
 
