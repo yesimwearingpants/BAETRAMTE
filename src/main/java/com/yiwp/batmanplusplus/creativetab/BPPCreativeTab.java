@@ -27,13 +27,13 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BPPCreativeTabs {
+public class BPPCreativeTab {
 
     public static CreativeTabs INSTANCE;
 
     static {
 
-        INSTANCE = new BPPCreativeTab("tabbatman", true) {
+        INSTANCE = new BPPCreativeTabs("tabbatman", true) {
 
             @Override
             @SideOnly(Side.CLIENT)
@@ -49,18 +49,12 @@ public class BPPCreativeTabs {
         };
     }
 
-    private static abstract class BPPCreativeTab extends CreativeTabs {
+    private static abstract class BPPCreativeTabs extends CreativeTabs {
 
         private boolean searchbar = false;
 
-        public BPPCreativeTab(String label) {
-
-            super(label);
-        }
-
-        public BPPCreativeTab(String label, boolean searchbar) {
-
-            this(label);
+        public BPPCreativeTabs(String label, boolean searchbar) {
+        	super(label);
             this.searchbar = searchbar;
         }
 

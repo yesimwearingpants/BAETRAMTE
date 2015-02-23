@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.BlockFluidFinite;
 import net.minecraftforge.fluids.Fluid;
 
-import com.yiwp.batmanplusplus.creativetab.BPPCreativeTabs;
+import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 
@@ -44,7 +44,7 @@ public class BlockExtFluid extends BlockFluidFinite {
     public BlockExtFluid(Fluid fluid, Material material, String metal, boolean alpha) {
         super(fluid, material);
         this.alpha = alpha;
-        this.setCreativeTab(BPPCreativeTabs.INSTANCE);
+        this.setCreativeTab(BPPCreativeTab.INSTANCE);
 		this.setBlockName(Reference.MODID + ":" + Names.fluid(metal));
     }
 

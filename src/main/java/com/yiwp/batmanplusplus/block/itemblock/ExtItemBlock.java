@@ -1,33 +1,28 @@
 package com.yiwp.batmanplusplus.block.itemblock;
 
+import mantle.blocks.abstracts.MultiItemBlock;
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ExtItemBlock extends ItemBlock {
+import com.yiwp.batmanplusplus.lib.reference.Names;
+import com.yiwp.batmanplusplus.lib.reference.Reference;
+
+public class ExtItemBlock extends MultiItemBlock {
 	
-	public String[] textureNames;
+	private static String[] textureNames;
 
 	public ExtItemBlock(Block b, String[] tex) {
-		super(b);
+		super(b, "tile", textureNames);
 		this.setHasSubtypes(true);
         textureNames = tex;
 	}
 	
-	public ExtItemBlock(Block b, boolean bool) {
-		super(b);
-		this.setHasSubtypes(bool);
+	public ExtItemBlock(Block b, String prefix, String[] tex) {
+		super(b, prefix, textureNames);
+		this.setHasSubtypes(true);
+        textureNames = tex;
 	}
-
-	@Override
-	public String getUnlocalizedName(ItemStack itemstack) {
-		int i = itemstack.getItemDamage();
-		if (i < 0 || i >= textureNames.length) {
-			i = 0;
-		}
-		return super.getUnlocalizedName() + textureNames[i];
-	}
-	
+			
 	@Override
 	public int getMetadata(int meta) {
 		return meta;

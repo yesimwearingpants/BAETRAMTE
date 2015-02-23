@@ -18,6 +18,7 @@ public class BlockCactusSteel extends ExtBlock {
 		super(Material.iron, Names.cactusSteel);
 		this.setHardness(h);
 		this.setResistance(r);
+		setHarvestLevel("pickaxe", 2);
 	}
 	
 	@Override

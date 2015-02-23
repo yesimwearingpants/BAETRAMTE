@@ -1,6 +1,10 @@
 package com.yiwp.batmanplusplus.lib.reference;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.fluids.Fluid;
 
 public class Names {
@@ -17,6 +21,8 @@ public class Names {
 	public static final String titaniumAlumide = "TitaniumAlumide";
 	public static final String slag = "Slag";
 	public static final String board = "PressBoard";
+	public static final String lux = "Lux";
+	
 			
 	public static String fluid(String metal) {
 		
@@ -28,22 +34,6 @@ public class Names {
 		return metal.toLowerCase() + ".molten";				
 	}
 
-	public static String ingot(String ingot) {
-		return "ingot" + ingot;
-	}
-
-	public static String nugget(String nugget) {
-		return "nugget" + nugget;
-	}
-	
-	public static final class Blocks {
-		
-	}
-	
-	public static final class Items {
-		
-	}
-	
 	public static final class Textures {
 		
 		public static String liquidstill(String tex) {
@@ -60,7 +50,20 @@ public class Names {
 		public static String item(String tex) {
 			return "item" + tex;
 		}
+	
+		public static String ingot(String ingot) {
+			return "ingot" + ingot;
+		}
+	
+		public static String nugget(String nugget) {
+			return "nugget" + nugget;
+		}
+		
+		public static String ore(String ore) {
+			return "ore" + ore;
+		}
 	}
+	
 	
 	public static final class Materials	{
 		
@@ -88,5 +91,7 @@ public class Names {
 		public static final String Catagory2 = "#####One-Stop Config-Shop#####";
 		public static final String Catagory3 = "############Extras############";
 	}
+
+	
 
 }

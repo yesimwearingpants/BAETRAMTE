@@ -6,7 +6,7 @@ import net.minecraft.util.IIcon;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 
-import com.yiwp.batmanplusplus.creativetab.BPPCreativeTabs;
+import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 

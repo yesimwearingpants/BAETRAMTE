@@ -1,6 +1,7 @@
 package com.yiwp.batmanplusplus.block;
 
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -25,14 +26,29 @@ public class MetalBlock extends ExtBlock {
 	static final String[] metalTypes = new String[] { Names.adamantium, Names.meteoricIron,
 	Names.molybdochalkos, Names.orichalcum, Names.titanium, Names.vibranium, Names.slag};
     private IIcon[] icons = new IIcon[metalTypes.length];	
-	protected float[] hardness = new float[] { 16.0f, 11.0f, 3.1f, 3.5f, 10.0f, 20.f, 10.5f};
-	private static float[] resistance = new float[] { 50.0f, 35.0f, 9.0f, 9.9f, 30.0f, 40.0f, 8.0f};
+	private static final float[] hardness = new float[] { 16.0f, 11.0f, 3.1f, 3.5f, 10.0f, 20.f, 10.5f};
+	private static int[] light = new int[] { 0, 0, 0, 0, 0, 0, 0, 15};
+	private static final float[] resistance = new float[] { 50.0f, 35.0f, 9.0f, 9.9f, 30.0f, 40.0f, 8.0f};
 	
 	public MetalBlock() {
 		super(Material.iron);
 		this.setStepSound(Block.soundTypeMetal);
 		this.setHardness(16.0f);
 		this.setResistance(35.0f);
+		
+		setHarvestLevel("pickaxe", 3, 0);
+		setHarvestLevel("pickaxe", 3, 1);
+		setHarvestLevel("pickaxe", 1, 2);
+		setHarvestLevel("pickaxe", 2, 3);
+		setHarvestLevel("pickaxe", 2, 4);
+		setHarvestLevel("pickaxe", 3, 5);
+		setHarvestLevel("pickaxe", 0, 6);
+	}
+	
+	@Override
+	public int getLightValue(IBlockAccess world, int x, int y, int z) {
+
+		return light[world.getBlockMetadata(x, y, z)];
 	}
 	
 	@Override
@@ -46,7 +62,7 @@ public class MetalBlock extends ExtBlock {
 
 		return resistance[world.getBlockMetadata(x, y, z)];
 	}
-
+		
 	@Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons (IIconRegister iconRegister) {
