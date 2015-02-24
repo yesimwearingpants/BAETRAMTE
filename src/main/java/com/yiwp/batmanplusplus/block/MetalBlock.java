@@ -23,8 +23,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class MetalBlock extends ExtBlock {
 
-	static final String[] metalTypes = new String[] { Names.adamantium, Names.meteoricIron,
-	Names.molybdochalkos, Names.orichalcum, Names.titanium, Names.vibranium, Names.slag};
+	static final String[] metalTypes = new String[] { Names.Metal.adamantium, Names.Metal.meteoricIron,
+	Names.Metal.molybdochalkos, Names.Metal.orichalcum, Names.Metal.titanium, Names.Metal.vibranium, Names.Metal.slag};
     private IIcon[] icons = new IIcon[metalTypes.length];	
 	private static final float[] hardness = new float[] { 16.0f, 11.0f, 3.1f, 3.5f, 10.0f, 20.f, 10.5f};
 	private static int[] light = new int[] { 0, 0, 0, 0, 0, 0, 0, 15};

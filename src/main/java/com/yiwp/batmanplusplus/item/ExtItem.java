@@ -14,7 +14,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ExtItem extends Item {
 	
 	private static String pre = "item";
-	private static String[] textureNames = new String[] {};
+	private static String[] textureNames;
 	
 	public ExtItem(String prefix) {
 		super();
@@ -33,23 +33,19 @@ public class ExtItem extends Item {
 	
 	@Override
 	public String getUnlocalizedName() {
-		return String.format(pre + ".%s%s", Reference.MODID + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+		return String.format(pre + ".%s", Reference.MODID + ":");
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack itemStack) {
 		int i = MathHelper.clamp_int(itemStack.getItemDamage(), 0, textureNames.length);
-		return String.format(pre + ".%s%s", Reference.MODID + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+		return String.format(getUnlocalizedName() + "%s", textureNames[i]);
 	}
 	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister) {
 		itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
-	}
-	
-	protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
-		return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
 	}
 	
 	public static class BPPItem extends ExtItem{

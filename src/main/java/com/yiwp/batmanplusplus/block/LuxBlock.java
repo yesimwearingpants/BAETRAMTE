@@ -33,7 +33,6 @@ public class LuxBlock extends ExtBlock{
         folder = location;
         renderPass = hasAlpha ? 1 : 0;
         setHardness(0.3F);
-        this.setCreativeTab(TConstructRegistry.blockTab);
         this.setLightLevel(1.0f);
     }
 

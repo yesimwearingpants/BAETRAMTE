@@ -12,25 +12,19 @@ import com.yiwp.batmanplusplus.lib.reference.Reference;
 
 public class LuxOreItemBlock extends ExtItemBlock {
 
-	static final String[] metalTypes = new String[] {Names.Glass.lux, "Nether"+ Names.Glass.lux};
-	private static String pre = "ore";
+	static final String[] textureNames = new String[] {Names.Glass.lux, "Nether"+ Names.Glass.lux};
 	
 	public LuxOreItemBlock(Block b) {
-		super(b, metalTypes);
-	}
-	
-	@Override
-	public String getUnlocalizedName() {
-		return String.format(pre + ".%s", Reference.MODID + ":");
+		super(b, "ore", textureNames);
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack itemstack) {
 		int i = itemstack.getItemDamage();
-		if (i < 0 || i >= metalTypes.length) {
+		if (i < 0 || i >= textureNames.length) {
 			i = 0;
 		}
-		return this.getUnlocalizedName() + metalTypes[i];
+		return super.getUnlocalizedName() + textureNames[i];
 	}
 	
 }

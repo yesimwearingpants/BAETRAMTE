@@ -34,7 +34,7 @@ public abstract class ExtBlock extends Block {
 	public ExtBlock(Material material, String tex) {
 		super(material);
 		this.setCreativeTab(BPPCreativeTab.INSTANCE);
-		this.setBlockName(Reference.MODID + ":" + Names.Textures.block(tex));
+		this.setBlockName(Reference.MODID + ":" + tex);
 		this.setBlockTextureName(Names.Textures.block(tex));
 	}
 

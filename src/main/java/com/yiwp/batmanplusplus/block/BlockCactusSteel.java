@@ -15,7 +15,7 @@ import net.minecraft.util.IIcon;
 public class BlockCactusSteel extends ExtBlock {
 
 	public BlockCactusSteel(float h, float r) {
-		super(Material.iron, Names.cactusSteel);
+		super(Material.iron, Names.Metal.cactusSteel);
 		this.setHardness(h);
 		this.setResistance(r);
 		setHarvestLevel("pickaxe", 2);
@@ -36,7 +36,7 @@ public class BlockCactusSteel extends ExtBlock {
 	@Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons (IIconRegister iconRegister) {
-		blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(5));
+		blockIcon = iconRegister.registerIcon(Reference.MODID.toLowerCase() + ":" + Names.Textures.block(Names.Metal.cactusSteel));
     }
 
 }

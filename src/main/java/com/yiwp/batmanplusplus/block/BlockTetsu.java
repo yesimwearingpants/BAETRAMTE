@@ -12,7 +12,7 @@ import net.minecraft.util.IIcon;
 public class BlockTetsu extends ExtBlock {
 
 	public BlockTetsu(float h, float r) {
-		super(Material.iron, Names.tetsu);
+		super(Material.iron, Names.Metal.tetsu);
 		this.setHardness(h);
 		this.setResistance(r);
 	}
@@ -20,7 +20,7 @@ public class BlockTetsu extends ExtBlock {
 	@Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons (IIconRegister iconRegister) {
-		blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(5));
+		blockIcon = iconRegister.registerIcon(Reference.MODID.toLowerCase() + ":" + Names.Textures.block(Names.Metal.tetsu));
     }
 
 }

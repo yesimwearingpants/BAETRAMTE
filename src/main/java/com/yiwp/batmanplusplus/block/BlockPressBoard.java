@@ -16,7 +16,6 @@ import net.minecraft.util.IIcon;
 
 public class BlockPressBoard extends ExtBlock {
 
-	private IIcon icon;
 
 	public BlockPressBoard() {
 		super(Material.wood, Names.Misc.board);
@@ -25,13 +24,7 @@ public class BlockPressBoard extends ExtBlock {
 	@Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons (IIconRegister iconRegister) {
-		icon  = iconRegister.registerIcon(Reference.MODID.toLowerCase() + ":" + Names.Textures.block(Names.Misc.board));
+		blockIcon  = iconRegister.registerIcon(Reference.MODID.toLowerCase() + ":" + Names.Textures.block(Names.Misc.board));
     }
 	    
-    @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon (int side, int meta) {
-        return icon;
-    }
-
 }

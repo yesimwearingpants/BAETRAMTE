@@ -15,7 +15,7 @@ public class LuxItemBlock extends MultiItemBlock{
 	private final static String[] textureNames = new String[] {Names.Glass.lux + "Lamp", Names.Glass.lux + "X-Ray"};
 	
 	public LuxItemBlock(Block b) {
-		super(b, "glass",textureNames);
+		super(b, "glass", textureNames);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
 	}

@@ -13,15 +13,9 @@ import com.yiwp.batmanplusplus.lib.reference.Reference;
 public class OreItemBlock extends ExtItemBlock {
 
 	static final String[] metalTypes = new String[] {Names.Metal.titanium, Names.Metal.vibranium};
-	private static String pre = "ore";
 	
 	public OreItemBlock(Block b) {
-		super(b, metalTypes);
-	}
-	
-	@Override
-	public String getUnlocalizedName() {
-		return String.format(pre + ".%s", Reference.MODID + ":");
+		super(b, "ore", metalTypes);
 	}
 	
 	@Override

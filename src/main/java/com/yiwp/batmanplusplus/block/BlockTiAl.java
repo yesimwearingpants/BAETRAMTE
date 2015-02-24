@@ -12,7 +12,7 @@ import net.minecraft.util.IIcon;
 public class BlockTiAl extends ExtBlock {
 
 	public BlockTiAl(float h, float r) {
-		super(Material.iron, Names.titaniumAlumide);
+		super(Material.iron, Names.Metal.titaniumAlumide);
 		this.setHardness(h);
 		this.setResistance(r);
 	}
@@ -20,7 +20,7 @@ public class BlockTiAl extends ExtBlock {
 	@Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons (IIconRegister iconRegister) {
-		blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(5));
+		blockIcon = iconRegister.registerIcon(Reference.MODID.toLowerCase() + ":" + Names.Textures.block(Names.Metal.titaniumAlumide));
     }
 
 }

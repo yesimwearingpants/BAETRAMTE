@@ -1,9 +1,16 @@
 package com.yiwp.batmanplusplus.init;
 
-import net.minecraft.block.Block;
-
-import com.yiwp.batmanplusplus.block.*;
-import com.yiwp.batmanplusplus.block.itemblock.LuxItemBlock;
+import com.yiwp.batmanplusplus.block.BlockCactusSteel;
+import com.yiwp.batmanplusplus.block.BlockPressBoard;
+import com.yiwp.batmanplusplus.block.BlockTetsu;
+import com.yiwp.batmanplusplus.block.BlockTiAl;
+import com.yiwp.batmanplusplus.block.ExtBlock;
+import com.yiwp.batmanplusplus.block.LuxBlock;
+import com.yiwp.batmanplusplus.block.LuxOreBlock;
+import com.yiwp.batmanplusplus.block.LuxPane;
+import com.yiwp.batmanplusplus.block.MetalBlock;
+import com.yiwp.batmanplusplus.block.OreBlock;
+import com.yiwp.batmanplusplus.block.itemblock.LuxOreItemBlock;
 import com.yiwp.batmanplusplus.block.itemblock.MetalItemBlock;
 import com.yiwp.batmanplusplus.block.itemblock.OreItemBlock;
 import com.yiwp.batmanplusplus.lib.reference.Names;
@@ -21,16 +28,18 @@ public class BlockInit {
 	public static ExtBlock BlockCactusSteel = new BlockCactusSteel(0.1f, 0.1f);
 	public static ExtBlock BlockPressBoard = new BlockPressBoard();
 	public static ExtBlock BlockLux = new LuxBlock("clear", false);
-	public static ExtBlock PaneLux = new LuxPane("clear", false);
+	public static ExtBlock PaneLux = new LuxPane("clear/pane", false);
 	public static ExtBlock BlockOre = new OreBlock();
+	public static ExtBlock BlockLuxOre = new LuxOreBlock();
 	
 	public static void preInit() {
-		GameRegistry.registerBlock(BlockTetsu, Names.Textures.block(Names.tetsu));
-		GameRegistry.registerBlock(BlockTitaniumAlumide, Names.Textures.block(Names.titaniumAlumide));
-		GameRegistry.registerBlock(BlockCactusSteel, Names.Textures.block(Names.cactusSteel));
-		GameRegistry.registerBlock(BlockPressBoard, Names.Textures.block(Names.board));
+		GameRegistry.registerBlock(BlockTetsu, Names.Textures.block(Names.Metal.tetsu));
+		GameRegistry.registerBlock(BlockTitaniumAlumide, Names.Textures.block(Names.Metal.titaniumAlumide));
+		GameRegistry.registerBlock(BlockCactusSteel, Names.Textures.block(Names.Metal.cactusSteel));
+		GameRegistry.registerBlock(BlockPressBoard, Names.Textures.block(Names.Misc.board));
 		GameRegistry.registerBlock(BlockLux, "blockLux");
 		GameRegistry.registerBlock(PaneLux, "paneLux");
+		GameRegistry.registerBlock(BlockLuxOre, LuxOreItemBlock.class, "oreLux");
 		GameRegistry.registerBlock(BlockMetaMetal, MetalItemBlock.class, "blockMetal");
 		GameRegistry.registerBlock(BlockOre, OreItemBlock.class, "blockOre");
 	}
