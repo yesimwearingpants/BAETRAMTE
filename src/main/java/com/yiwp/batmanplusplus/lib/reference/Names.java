@@ -8,22 +8,38 @@ import net.minecraft.util.StatCollector;
 import net.minecraftforge.fluids.Fluid;
 
 public class Names {
-		
-	public static final String darkIron = "DarkIron";	
-	public static final String molybdochalkos = "Molybdochalkos";
-	public static final String orichalcum = "Orichalcum";
-	public static final String cactusSteel = "CactusSteel";
-	public static final String meteoricIron = "MeteoricIron";
-	public static final String tetsu = "Tetsu";
-	public static final String titanium = "Titanium";
-	public static final String vibranium = "Vibranium";
-	public static final String adamantium = "Adamantium";
-	public static final String titaniumAlumide = "TitaniumAlumide";
-	public static final String slag = "Slag";
-	public static final String board = "PressBoard";
-	public static final String lux = "Lux";
 	
-			
+	public static final class Metal {
+		
+		public static final String darkIron = "DarkIron";	
+		public static final String molybdochalkos = "Molybdochalkos";
+		public static final String orichalcum = "Orichalcum";
+		public static final String cactusSteel = "CactusSteel";
+		public static final String meteoricIron = "MeteoricIron";
+		public static final String tetsu = "Tetsu";
+		public static final String titanium = "Titanium";
+		public static final String vibranium = "Vibranium";
+		public static final String adamantium = "Adamantium";
+		public static final String titaniumAlumide = "TitaniumAlumide";
+		public static final String slag = "Slag";
+		
+	}
+	
+	public static final class Glass {
+		
+		public static final String lux = "Lux";
+		public static final String woodGlass = "WoodGlass";
+		public static final String copper = "Copper";
+		public static final String bronze = "Bronze";
+		
+	}
+	
+	public static final class Misc {
+				
+		public static final String board = "PressBoard";
+		
+	}
+
 	public static String fluid(String metal) {
 		
 		return "fluid.molten." + metal.toLowerCase();
