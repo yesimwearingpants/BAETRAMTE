@@ -50,9 +50,14 @@ public class LuxOreBlock extends ExtBlock {
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons (IIconRegister iconRegister) {
         for (int i = 0; i < textureNames.length; ++i) {
-            icons[i] = iconRegister.registerIcon(Reference.MODID.toLowerCase() + ":" + Names.Textures.ore(textureNames[i]));
-            System.out.println(icons[i] + "################################################################################################");
+            icons[i] = iconRegister.registerIcon(Reference.MODID + ":" + Names.Textures.ore(textureNames[i]));
         }
+    }
+	
+	@Override
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon (int side, int meta) {
+        return icons[meta];
     }
     
 	@Override
