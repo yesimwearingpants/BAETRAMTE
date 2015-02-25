@@ -18,7 +18,7 @@ import com.yiwp.batmanplusplus.lib.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class LuxOreBlock extends ExtBlock {
+public class LuxOreBlock extends ExtBlock implements IBlock {
 	
 	public static final String[] textureNames = new String[] {Names.Glass.lux, "Nether" + Names.Glass.lux};
     private IIcon[] icons = new IIcon[textureNames.length];	

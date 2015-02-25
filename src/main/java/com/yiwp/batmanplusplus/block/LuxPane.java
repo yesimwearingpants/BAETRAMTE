@@ -1,7 +1,7 @@
 package com.yiwp.batmanplusplus.block;
 
 import java.util.List;
-
+/*
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
@@ -15,10 +15,10 @@ import tconstruct.smeltery.model.PaneConnectedRender;
 import tconstruct.util.config.PHConstruct;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+*/
+public class LuxPane {//extends LuxBlock{
 
-public class LuxPane extends LuxBlock{
-
-    private IIcon theIcon;
+    /*private IIcon theIcon;
 
     public LuxPane(String location, boolean hasAlpha)
     {
@@ -35,22 +35,21 @@ public class LuxPane extends LuxBlock{
     @Override
     @SideOnly(Side.CLIENT)
     public IIcon getIcon (IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) {
-        if (par5 == 0 || par5 == 1)
-        {
+        if (par5 == 0 || par5 == 1) {
             return par1IBlockAccess.getBlock(par2, par3 - 1, par4) == this && par5 == 0 ? icons[15] : par1IBlockAccess.getBlock
-            		(par2, par3 + 1, par4) == this && par5 == 1 ? icons[15] : getSideTextureIndex();
+            		(par2, par3 + 1, par4) == this && par5 == 1 ? icons[i][15] : getSideTextureIndex();
         } else {
             return super.getIcon(par1IBlockAccess, par2, par3, par4, par5);
         }
     }
 
     @Override
-    public IIcon getConnectedBlockTexture (IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5, IIcon[] icons) {
+    public IIcon getConnectedBlockTexture (IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5, IIcon[][] icons) {
         if (par5 == 0 || par5 == 1) {
             return getSideTextureIndex();
         }
         if (PHConstruct.connectedTexturesMode == 0) {
-            return icons[0];
+            return icons[i][0];
         }
         boolean isOpenUp = false, isOpenDown = false, isOpenLeft = false, isOpenRight = false;
 
@@ -545,5 +544,5 @@ public class LuxPane extends LuxBlock{
     @Override
     public boolean shouldSideBeRendered (IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) {
         return true;
-    }
+    }*/
 }

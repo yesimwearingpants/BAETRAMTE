@@ -21,7 +21,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class MetalBlock extends ExtBlock {
+public class MetalBlock extends ExtBlock implements IBlock{
 
 	static final String[] metalTypes = new String[] { Names.Metal.adamantium, Names.Metal.meteoricIron,
 	Names.Metal.molybdochalkos, Names.Metal.orichalcum, Names.Metal.titanium, Names.Metal.vibranium, Names.Metal.slag};

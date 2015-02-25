@@ -19,12 +19,11 @@ import com.yiwp.batmanplusplus.lib.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class OreBlock extends ExtBlock {
+public class OreBlock extends ExtBlock implements IBlock{
 
 	static final String[] metalTypes = new String[] {Names.Metal.titanium, Names.Metal.vibranium};
     private IIcon[] icons = new IIcon[metalTypes.length];	
 	private static final float[] hardness = new float[] {7.5f, 15.f};
-	private static final int[] light = new int[] {0, 0};
 	private static final float[] resistance = new float[] {20.0f, 30.0f};
 	
 	public OreBlock() {
@@ -37,12 +36,6 @@ public class OreBlock extends ExtBlock {
 		setHarvestLevel("pickaxe", 3, 1);
 		setHarvestLevel("pickaxe", 1, 2);
 		setHarvestLevel("pickaxe", 1, 3);
-	}
-	
-	@Override
-	public int getLightValue(IBlockAccess world, int x, int y, int z) {
-
-		return light[world.getBlockMetadata(x, y, z)];
 	}
 	
 	@Override
@@ -76,11 +69,6 @@ public class OreBlock extends ExtBlock {
         return icons[meta];
     }
 		
-	public boolean isBeaconBase (IBlockAccess worldObj, int x, int y, int z, int beaconX, int beaconY, int beaconZ)	{
-        return true;
-        
-    }
-	
 	@Override
     public int damageDropped (int meta) {
         return meta;
