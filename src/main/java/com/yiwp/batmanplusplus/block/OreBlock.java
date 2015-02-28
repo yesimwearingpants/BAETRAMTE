@@ -21,10 +21,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class OreBlock extends ExtBlock implements IBlock{
 
-	static final String[] metalTypes = new String[] {Names.Metal.titanium, Names.Metal.vibranium};
+	static final String[] metalTypes = new String[] {Names.Metal.titanium, Names.Metal.vibranium, "Poor" + Names.Metal.vibranium};
     private IIcon[] icons = new IIcon[metalTypes.length];	
-	private static final float[] hardness = new float[] {7.5f, 15.f};
-	private static final float[] resistance = new float[] {20.0f, 30.0f};
+	private static final float[] hardness = new float[] {7.5f, 15.0f, 13.0f};
+	private static final float[] resistance = new float[] {20.0f, 30.0f, 25.0f};
 	
 	public OreBlock() {
 		super(Material.rock);
@@ -34,8 +34,7 @@ public class OreBlock extends ExtBlock implements IBlock{
 		
 		setHarvestLevel("pickaxe", 2, 0);
 		setHarvestLevel("pickaxe", 3, 1);
-		setHarvestLevel("pickaxe", 1, 2);
-		setHarvestLevel("pickaxe", 1, 3);
+		setHarvestLevel("pickaxe", 3, 2);
 	}
 	
 	@Override
