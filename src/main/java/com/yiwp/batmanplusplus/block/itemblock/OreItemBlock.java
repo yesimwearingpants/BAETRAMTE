@@ -12,7 +12,7 @@ import com.yiwp.batmanplusplus.lib.reference.Reference;
 
 public class OreItemBlock extends ExtItemBlock {
 
-	static final String[] metalTypes = new String[] {Names.Metal.titanium, Names.Metal.vibranium, "Poor" + Names.Metal.vibranium};
+	static final String[] metalTypes = new String[] {"Poor" + Names.Metal.titanium, Names.Metal.titanium, Names.Metal.vibranium, "Poor" + Names.Metal.vibranium};
 	
 	public OreItemBlock(Block b) {
 		super(b, "ore", metalTypes);

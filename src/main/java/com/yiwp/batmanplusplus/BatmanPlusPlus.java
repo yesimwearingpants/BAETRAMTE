@@ -35,7 +35,8 @@ public class BatmanPlusPlus
 		BlockInit.preInit();
 		ItemInit.preInit();
 		//FluidInit.preInit();
-		BiomeInit.preInit();
+		//BiomeInit.preInit();
+		
 		LogHelper.info("##########Pre Initialization Complete##########");
 		
 	}

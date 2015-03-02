@@ -32,13 +32,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BPPCreativeTab extends CreativeTabs{
 
-	public static final BPPCreativeTab INSTANCE = new BPPCreativeTab(Reference.NAME, true);
-	private boolean search;
+	public static final BPPCreativeTab INSTANCE = new BPPCreativeTab(Reference.NAME);
+	private boolean search = true;
 
-	public BPPCreativeTab(String label, boolean searchbar)
+	public BPPCreativeTab(String label)
 	{
 		super(label);
-        this.search = searchbar;
 	}
 	
 	@Override
@@ -48,14 +47,12 @@ public class BPPCreativeTab extends CreativeTabs{
     }
 
 	@Override
-	public ItemStack getIconItemStack()
-	{
+	public ItemStack getIconItemStack()	{
 		return new ItemStack(Blocks.acacia_stairs, 1, 16);
 	}
 
 	@Override
-	public String getTranslatedTabLabel()
-	{
+	public String getTranslatedTabLabel() {
 		return this.getTabLabel();
 	}
 	
@@ -69,13 +66,12 @@ public class BPPCreativeTab extends CreativeTabs{
     @Override
     public int getSearchbarWidth() {
 
-        return 62;
+        return 89;
     }
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public Item getTabIconItem()
-	{
+	public Item getTabIconItem() {
 		return null;
 	}
 }

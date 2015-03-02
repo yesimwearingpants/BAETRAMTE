@@ -21,7 +21,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class OreBlock extends ExtBlock implements IBlock{
 
-	static final String[] metalTypes = new String[] {Names.Metal.titanium, Names.Metal.vibranium, "Poor" + Names.Metal.vibranium};
+	static final String[] metalTypes = new String[] {"Poor"+ Names.Metal.titanium, Names.Metal.titanium, Names.Metal.vibranium, "Poor" + Names.Metal.vibranium};
     private IIcon[] icons = new IIcon[metalTypes.length];	
 	private static final float[] hardness = new float[] {7.5f, 15.0f, 13.0f};
 	private static final float[] resistance = new float[] {20.0f, 30.0f, 25.0f};

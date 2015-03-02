@@ -103,9 +103,10 @@ public class Names {
 	
 	public static final class Config	{
 		
-		public static final String Catagory1 = "############Modules###########";
-		public static final String Catagory2 = "#####One-Stop Config-Shop#####";
-		public static final String Catagory3 = "############Extras############";
+		public static final String Modules = "############Modules###########";
+		public static final String OSCS = "#####One-Stop Config-Shop#####";
+		public static final String Extras = "############Extras############";
+		public static final String Core = "#############Core#############";
 	}
 
 	
