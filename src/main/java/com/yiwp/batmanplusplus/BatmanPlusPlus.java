@@ -4,6 +4,7 @@ import com.yiwp.batmanplusplus.init.BiomeInit;
 import com.yiwp.batmanplusplus.init.BlockInit;
 import com.yiwp.batmanplusplus.init.FluidInit;
 import com.yiwp.batmanplusplus.init.ItemInit;
+import com.yiwp.batmanplusplus.init.WorldInit;
 import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 import com.yiwp.batmanplusplus.lib.utils.LogHelper;
@@ -36,7 +37,7 @@ public class BatmanPlusPlus
 		ItemInit.preInit();
 		//FluidInit.preInit();
 		//BiomeInit.preInit();
-		
+		WorldInit.preInit();
 		LogHelper.info("##########Pre Initialization Complete##########");
 		
 	}

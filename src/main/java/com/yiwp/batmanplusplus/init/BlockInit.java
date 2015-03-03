@@ -28,6 +28,7 @@ public class BlockInit {
 	public static ExtBlock BlockCactusSteel = new BlockCactusSteel(0.1f, 0.1f);
 	public static ExtBlock BlockPressBoard = new BlockPressBoard();
 	public static ExtBlock BlockLux = new LuxBlock("clear", false);
+	public static ExtBlock BlockXray = new LuxBlock("xray", false);
 	//public static ExtBlock PaneLux = new LuxPane("clear/pane", false);
 	public static ExtBlock BlockOre = new OreBlock();
 	public static ExtBlock BlockLuxOre = new LuxOreBlock();
@@ -38,6 +39,7 @@ public class BlockInit {
 		GameRegistry.registerBlock(BlockCactusSteel, Names.Textures.block(Names.Metal.cactusSteel));
 		GameRegistry.registerBlock(BlockPressBoard, Names.Textures.block(Names.Misc.board));
 		GameRegistry.registerBlock(BlockLux, LuxItemBlock.class, "blockLux");
+		GameRegistry.registerBlock(BlockXray, LuxItemBlock.class, "blockXray");
 		//GameRegistry.registerBlock(PaneLux, "paneLux");
 		GameRegistry.registerBlock(BlockLuxOre, LuxOreItemBlock.class, "oreLux");
 		GameRegistry.registerBlock(BlockMetaMetal, MetalItemBlock.class, "blockMetal");

@@ -23,7 +23,11 @@ public class ConfigurationHandler {
 	public static int configBiome3ID;
 	public static boolean connectedTexturesMode;
 	public static boolean oneStopConfig;
-	public static void init (File configFile)	{
+	public static boolean vibraniumgen;
+	public static boolean poorore;
+	public static boolean luxgen;
+	public static boolean nluxgen;
+		public static void init (File configFile)	{
 		if (config == null) {
 		
 		//Create & Load Configuration Object from Given File

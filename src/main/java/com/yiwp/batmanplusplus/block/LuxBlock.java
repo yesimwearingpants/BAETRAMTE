@@ -11,6 +11,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import tconstruct.library.TConstructRegistry;
 
+import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
 import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
 
 import cpw.mods.fml.common.Loader;
@@ -27,6 +28,7 @@ public class LuxBlock extends ExtBlock {
     private boolean shouldRenderSelectionBox = true;
     protected String folder;
     private int renderPass;
+    
 
     public LuxBlock(String location, boolean hasAlpha)
     {
@@ -35,7 +37,7 @@ public class LuxBlock extends ExtBlock {
         folder = location;
         renderPass = hasAlpha ? 1 : 0;
         setHardness(0.3F);
-        this.setCreativeTab(TConstructRegistry.blockTab);
+        this.setCreativeTab(BPPCreativeTab.INSTANCE);
     }
 
     // For FMP support
@@ -621,22 +623,22 @@ public class LuxBlock extends ExtBlock {
     @Override
     public void registerBlockIcons (IIconRegister par1IconRegister)
     {
-        icons[0] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass");
-        icons[1] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_1_d");
-        icons[2] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_1_u");
-        icons[3] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_1_l");
-        icons[4] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_1_r");
-        icons[5] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_2_h");
-        icons[6] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_2_v");
-        icons[7] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_2_dl");
-        icons[8] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_2_dr");
-        icons[9] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_2_ul");
-        icons[10] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_2_ur");
-        icons[11] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_3_d");
-        icons[12] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_3_u");
-        icons[13] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_3_l");
-        icons[14] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_3_r");
-        icons[15] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/glass_4");
+        icons[0] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder);
+        icons[1] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "1");
+        icons[2] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "2");
+        icons[3] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "3");
+        icons[4] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "4");
+        icons[5] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "5");
+        icons[6] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "6");
+        icons[7] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "7");
+        icons[8] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "8");
+        icons[9] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "9");
+        icons[10] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "10");
+        icons[11] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "11");
+        icons[12] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "12");
+        icons[13] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "13");
+        icons[14] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "14");
+        icons[15] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "15");
     }
 
     @Override
