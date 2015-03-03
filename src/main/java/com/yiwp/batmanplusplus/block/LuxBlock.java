@@ -1,7 +1,5 @@
 package com.yiwp.batmanplusplus.block;
 
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -9,12 +7,11 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import tconstruct.library.TConstructRegistry;
 
 import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
 import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
+import com.yiwp.batmanplusplus.lib.reference.Reference;
 
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -623,22 +620,22 @@ public class LuxBlock extends ExtBlock {
     @Override
     public void registerBlockIcons (IIconRegister par1IconRegister)
     {
-        icons[0] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder);
-        icons[1] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "1");
-        icons[2] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "2");
-        icons[3] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "3");
-        icons[4] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "4");
-        icons[5] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "5");
-        icons[6] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "6");
-        icons[7] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "7");
-        icons[8] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "8");
-        icons[9] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "9");
-        icons[10] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "10");
-        icons[11] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "11");
-        icons[12] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "12");
-        icons[13] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "13");
-        icons[14] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "14");
-        icons[15] = par1IconRegister.registerIcon("tinker:glass/" + folder + "/" + folder + "15");
+        icons[0] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder);
+        icons[1] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "1");
+        icons[2] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "2");
+        icons[3] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "3");
+        icons[4] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "4");
+        icons[5] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "5");
+        icons[6] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "6");
+        icons[7] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "7");
+        icons[8] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "8");
+        icons[9] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "9");
+        icons[10] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "10");
+        icons[11] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "11");
+        icons[12] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "12");
+        icons[13] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "13");
+        icons[14] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "14");
+        icons[15] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "15");
     }
 
     @Override
