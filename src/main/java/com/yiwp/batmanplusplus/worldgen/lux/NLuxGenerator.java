@@ -2,7 +2,6 @@ package com.yiwp.batmanplusplus.worldgen.lux;
 
 import java.util.Random;
 
-import mods.railcraft.common.worldgen.WorldGenSulfur;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -10,8 +9,8 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.terraingen.OreGenEvent;
-import net.minecraftforge.event.terraingen.TerrainGen;
 import net.minecraftforge.event.terraingen.OreGenEvent.GenerateMinable.EventType;
+import net.minecraftforge.event.terraingen.TerrainGen;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class NLuxGenerator {

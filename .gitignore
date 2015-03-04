@@ -3,6 +3,7 @@
 /eclipse
 /src2
 *.class
+/lwjgl*
 #ant stuff
 /bin/
 /download/
