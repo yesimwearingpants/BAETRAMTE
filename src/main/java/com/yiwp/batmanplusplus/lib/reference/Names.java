@@ -107,6 +107,8 @@ public class Names {
 		public static final String OSCS = "#####One-Stop Config-Shop#####";
 		public static final String Extras = "############Extras############";
 		public static final String Core = "#############Core#############";
+		public static final String Recipe = "###########Recipes############";
+		public static final String Generation = "#######World Generation#######";
 	}
 
 	

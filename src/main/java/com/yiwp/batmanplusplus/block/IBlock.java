@@ -18,13 +18,13 @@ public interface IBlock {
 	public float getExplosionResistance(Entity entity, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ);
 
     @SideOnly(Side.CLIENT)
-    public abstract void registerBlockIcons (IIconRegister iconRegister);
+    public void registerBlockIcons (IIconRegister iconRegister);
     
-	public abstract void getSubBlocks (Item block, CreativeTabs tab, List list);
+	public void getSubBlocks (Item block, CreativeTabs tab, List list);
 
     @SideOnly(Side.CLIENT)
-    public abstract IIcon getIcon (int side, int meta);
+    public IIcon getIcon (int side, int meta);
 
-    public abstract int damageDropped (int meta);
+    public int damageDropped (int meta);
 
 }

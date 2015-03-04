@@ -23,7 +23,7 @@ public class LuxOreBlock extends ExtBlock implements IBlock {
 	public static final String[] textureNames = new String[] {Names.Glass.lux, "Nether" + Names.Glass.lux};
     private IIcon[] icons = new IIcon[textureNames.length];	
 	private static final float[] hardness = new float[] {2.0f, 0.75f};
-	private static final int[] light = new int[] {7, 7};
+	private static final int[] light = new int[] {9, 9};
 	private static final float[] resistance = new float[] {9.9f, 5.0f};
 
 	public LuxOreBlock() {

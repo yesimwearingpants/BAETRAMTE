@@ -24,6 +24,7 @@ public class ConfigurationHandler {
 	public static boolean connectedTexturesMode;
 	public static boolean oneStopConfig;
 	public static boolean vibraniumgen;
+	public static boolean titaniumgen;
 	public static boolean poorore;
 	public static boolean luxgen;
 	public static boolean nluxgen;
@@ -45,16 +46,18 @@ public class ConfigurationHandler {
 	
 	private static void loadConfiguration()	{
 		
-		configCastDeniers = config.get(Names.Config.Modules, "Casting Millenaire Deniers", true, "Disables This Feature").getBoolean(true);
-		configAddMagicMetals = config.get(Names.Config.Modules, "Adds Metals for TC4/BloodMagic/EE3", true, "Disables The Metals Entirely").getBoolean(true);
+		configCastDeniers = config.get(Names.Config.Recipe, "Casting Millenaire Deniers", true, "Disables This Feature").getBoolean(true);
+		configAddMagicMetals = config.get(Names.Config.Core, "Adds Metals for TC4/BloodMagic/EE3", true).getBoolean(true);
 		configBiome0ID = config.get(Names.Config.Extras, "Biome ID's", 250).getInt();
 		configBiome1ID = config.get(Names.Config.Extras, "Biome ID's", 251).getInt();
 		configBiome2ID = config.get(Names.Config.Extras, "Biome ID's", 252).getInt();
 		configBiome3ID = config.get(Names.Config.Extras, "Biome ID's", 253).getInt();
 		oneStopConfig = config.get(Names.Config.Core, "Stops All 'OSCS' Settings From Toggling Other Mod Configs", false).getBoolean(false);
-		connectedTexturesMode = config.get(Names.Config.OSCS, "Disables TCon Connected Textures Aswell as Mine", false).getBoolean(false);
+		titaniumgen = config.get(Names.Config.Generation, "Titanium World Gen", true).getBoolean(true);
+		vibraniumgen = config.get(Names.Config.Generation, "Vibranium World Gen", true).getBoolean(true);
+		connectedTexturesMode = config.get(Names.Config.OSCS, "Disables TCon Connected Textures As well as Mine", true).getBoolean(true);
 		if(oneStopConfig == true){
-			if(connectedTexturesMode == true) {
+			if(connectedTexturesMode == false) {
 				PHConstruct.connectedTexturesMode = 0;
 			}
 		}
@@ -62,6 +65,10 @@ public class ConfigurationHandler {
 		if (config.hasChanged()) {
 			config.save();
 		}
+	}
+	
+	public static boolean isWorldGenEnabled(boolean bool) {
+		return bool;
 	}
 
 }

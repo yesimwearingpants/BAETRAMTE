@@ -1,5 +1,11 @@
 package com.yiwp.batmanplusplus.block;
 
+import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
+import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
+import com.yiwp.batmanplusplus.lib.reference.Reference;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -8,33 +14,18 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
-import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
-import com.yiwp.batmanplusplus.lib.reference.Reference;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
-/**
- * @author fuj1n
- * 
- */
-
-public class LuxBlock extends ExtBlock {
+public class XrayBlock extends ExtBlock{
 	
     protected IIcon[] icons = new IIcon[16];
     private boolean shouldRenderSelectionBox = true;
     protected String folder;
-    private int renderPass;
-    
-    public LuxBlock(String location, boolean hasAlpha)
+
+    public XrayBlock(String location)
     {
         super(Material.glass, location);
         this.stepSound = soundTypeGlass;
         folder = location;
-        renderPass = hasAlpha ? 1 : 0;
         setHardness(0.3F);
-        setLightLevel(1.0f);
         this.setCreativeTab(BPPCreativeTab.INSTANCE);
     }
 
@@ -48,18 +39,6 @@ public class LuxBlock extends ExtBlock {
     public boolean isOpaqueCube ()
     {
         return false;
-    }
-
-    @Override
-    public boolean renderAsNormalBlock ()
-    {
-        return false;
-    }
-
-    @Override
-    public int getRenderBlockPass ()
-    {
-        return renderPass;
     }
 
     /**
