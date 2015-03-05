@@ -31,6 +31,7 @@ public class Names {
 		public static final String woodGlass = "WoodGlass";
 		public static final String copper = "Copper";
 		public static final String bronze = "Bronze";
+		public static final String test = "Test";
 		
 	}
 	

@@ -600,22 +600,22 @@ public class XrayBlock extends ExtBlock{
     @Override
     public void registerBlockIcons (IIconRegister par1IconRegister)
     {
-        icons[0] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder);
-        icons[1] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_1");
-        icons[2] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_2");
-        icons[3] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_3");
-        icons[4] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_4");
-        icons[5] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_5");
-        icons[6] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_6");
-        icons[7] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_7");
-        icons[8] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_8");
-        icons[9] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_9");
-        icons[10] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_10");
-        icons[11] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_11");
-        icons[12] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_12");
-        icons[13] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_13");
-        icons[14] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_14");
-        icons[15] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "_15");
+        icons[0] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-0");
+        icons[1] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-1");
+        icons[2] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-");
+        icons[3] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-3");
+        icons[4] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-4");
+        icons[5] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-5");
+        icons[6] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-6");
+        icons[7] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-7");
+        icons[8] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-8");
+        icons[9] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-9");
+        icons[10] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-10");
+        icons[11] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-11");
+        icons[12] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-12");
+        icons[13] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-13");
+        icons[14] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-14");
+        icons[15] = par1IconRegister.registerIcon(Reference.MODID + ":glass/" + folder + "/" + folder + "-15");
     }
 
     @Override

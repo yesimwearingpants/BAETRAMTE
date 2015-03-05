@@ -1,14 +1,12 @@
 package com.yiwp.batmanplusplus;
 
-import com.yiwp.batmanplusplus.init.BiomeInit;
 import com.yiwp.batmanplusplus.init.BlockInit;
-import com.yiwp.batmanplusplus.init.FluidInit;
 import com.yiwp.batmanplusplus.init.ItemInit;
 import com.yiwp.batmanplusplus.init.WorldInit;
 import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 import com.yiwp.batmanplusplus.lib.utils.LogHelper;
-import com.yiwp.batmanplusplus.proxy.IProxy;
+import com.yiwp.batmanplusplus.proxy.BPPProxyCommon;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -25,7 +23,7 @@ public class BatmanPlusPlus
 	public static BatmanPlusPlus instance;
 	
 	@SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.SERVER)
-	public static IProxy proxy;
+	public static BPPProxyCommon proxy;
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)	{
@@ -44,7 +42,7 @@ public class BatmanPlusPlus
 	
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)    {
-    	    	
+    	proxy.registerRenderers();
     	LogHelper.info("##########Initialization Complete##########");
     }
     

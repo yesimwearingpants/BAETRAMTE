@@ -11,6 +11,7 @@ public class BPPProxyClient extends BPPProxyCommon {
 	
 	public static int renderPass;	
 	public static int lightRender;
+	
        
 	@Override
 	public void registerRenderers() {
