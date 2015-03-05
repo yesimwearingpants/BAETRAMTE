@@ -14,6 +14,7 @@ import net.minecraft.util.Facing;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 
+import com.cricketcraft.chisel.block.BlockCarvable;
 import com.yiwp.batmanplusplus.creativetab.BPPCreativeTab;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
@@ -23,6 +24,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public abstract class ExtBlock extends Block {
 	
+	private boolean isAlpha;
+
 	//Metadata
 	public ExtBlock(Material material) {
 		super(material);
@@ -47,6 +50,17 @@ public abstract class ExtBlock extends Block {
 
         return 1;
     }
+	
+	public ExtBlock setStained(boolean a) {
+		this.isAlpha = a;
+		return this;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public int getRenderBlockPass() {
+		return isAlpha ? 1 : 0;
+	}
 	
 	public static class ExtBreakable extends ExtBlock {
 		

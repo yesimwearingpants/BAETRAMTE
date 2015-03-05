@@ -18,7 +18,7 @@ public class BlockInit {
 	public static ExtBlock BlockCactusSteel = new CactusSteelBlock(0.1f, 0.1f);
 	public static ExtBlock BlockPressBoard = new PressBoardBlock();
 	public static ExtBlock BlockLux = new LuxBlock("lux", false);
-	public static ExtBlock BlockXray = new XrayBlock("xray");
+	public static ExtBlock BlockXray = new XrayBlock();
 	public static ExtBlock BloXXray = new XrayBlox("xray");
 	//public static ExtBlock PaneLux = new LuxPane("clear/pane", false);
 	public static ExtBlock BlockLight = new LightBlock();
