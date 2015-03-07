@@ -27,7 +27,6 @@ public class MetalBlock extends ExtBlock implements IBlock{
 	Names.Metal.molybdochalkos, Names.Metal.orichalcum, Names.Metal.titanium, Names.Metal.vibranium, Names.Metal.slag};
     private IIcon[] icons = new IIcon[metalTypes.length];	
 	private static final float[] hardness = new float[] { 16.0f, 11.0f, 3.1f, 3.5f, 10.0f, 20.f, 10.5f};
-	private static int[] light = new int[] { 0, 0, 0, 0, 0, 0, 0, 15};
 	private static final float[] resistance = new float[] { 50.0f, 35.0f, 9.0f, 9.9f, 30.0f, 40.0f, 8.0f};
 	
 	public MetalBlock() {
@@ -43,12 +42,6 @@ public class MetalBlock extends ExtBlock implements IBlock{
 		setHarvestLevel("pickaxe", 2, 4);
 		setHarvestLevel("pickaxe", 3, 5);
 		setHarvestLevel("pickaxe", 0, 6);
-	}
-	
-	@Override
-	public int getLightValue(IBlockAccess world, int x, int y, int z) {
-
-		return light[world.getBlockMetadata(x, y, z)];
 	}
 	
 	@Override
