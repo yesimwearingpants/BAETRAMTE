@@ -28,16 +28,18 @@ apply plugin: 'maven'
 apply plugin: 'eclipse'
 
 
-version = "0.0.0.02"
+version = "0.0.0.01"
 group= "com.yiwp.batmanplusplus" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "modid"
 
 minecraft {
     version = "1.7.10-10.13.2.1291"
+    build = "0"
     runDir = "eclipse"
 
 	replaceIn "reference/Reference.java"
 	replace "@VERSION@", project.version
+	replace "@BUILD@", project.build
 }
 
 repositories {
@@ -71,12 +73,10 @@ dependencies {
     compile "codechicken:CodeChickenLib:1.7.10-1.1.1.11:src"
     compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:src"
     compile "codechicken:NotEnoughItems:1.0.4.83:src"
-    compile "codechicken:ForgeMultipart:1.7.10-1.1.1.321:src"
     compile "codechicken:EnderStorage:1.7.10-1.4.5.22:src"
     compile "codechicken:CodeChickenLib:1.7.10-1.1.1.11:dev"
     compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:dev"
     compile "codechicken:NotEnoughItems:1.0.4.83:dev"
-    compile "codechicken:ForgeMultipart:1.7.10-1.1.1.321:dev"
     compile "tconstruct:TConstruct:1.7.10-1.8.2.build880:deobf"
     compile "codechicken:EnderStorage:1.7.10-1.4.5.22:dev"
     compile "mantle:Mantle:1.7.10-0.3.2.jenkins187:deobf"
