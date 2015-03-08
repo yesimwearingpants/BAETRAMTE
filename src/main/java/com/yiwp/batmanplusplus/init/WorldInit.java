@@ -3,10 +3,10 @@ package com.yiwp.batmanplusplus.init;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 
+import com.yiwp.batmanplusplus.common.worldgen.lux.LuxGenerator;
+import com.yiwp.batmanplusplus.common.worldgen.lux.LuxWorldGen;
+import com.yiwp.batmanplusplus.common.worldgen.lux.NLuxGenerator;
 import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
-import com.yiwp.batmanplusplus.worldgen.lux.LuxGenerator;
-import com.yiwp.batmanplusplus.worldgen.lux.LuxWorldGen;
-import com.yiwp.batmanplusplus.worldgen.lux.NLuxGenerator;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.registry.GameRegistry;

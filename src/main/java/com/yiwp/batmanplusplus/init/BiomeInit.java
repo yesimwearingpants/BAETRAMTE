@@ -7,8 +7,8 @@ import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.BiomeManager.BiomeEntry;
 import net.minecraftforge.common.BiomeManager.BiomeType;
 
+import com.yiwp.batmanplusplus.common.worldgen.biome.ExtBiome;
 import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
-import com.yiwp.batmanplusplus.worldgen.biome.ExtBiome;
 
 public class BiomeInit {
 	

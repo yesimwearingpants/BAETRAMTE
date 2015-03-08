@@ -1,9 +1,9 @@
 package com.yiwp.batmanplusplus.init;
 
-import com.yiwp.batmanplusplus.block.*;
-import com.yiwp.batmanplusplus.block.itemblock.LuxOreItemBlock;
-import com.yiwp.batmanplusplus.block.itemblock.MetalItemBlock;
-import com.yiwp.batmanplusplus.block.itemblock.OreItemBlock;
+import com.yiwp.batmanplusplus.common.block.*;
+import com.yiwp.batmanplusplus.common.block.itemblock.LuxOreItemBlock;
+import com.yiwp.batmanplusplus.common.block.itemblock.MetalItemBlock;
+import com.yiwp.batmanplusplus.common.block.itemblock.OreItemBlock;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 

@@ -1,8 +1,8 @@
 package com.yiwp.batmanplusplus.init;
 
-import com.yiwp.batmanplusplus.item.ExtItem;
-import com.yiwp.batmanplusplus.item.ItemIngot;
-import com.yiwp.batmanplusplus.item.ItemNugget;
+import com.yiwp.batmanplusplus.common.item.ExtItem;
+import com.yiwp.batmanplusplus.common.item.ItemIngot;
+import com.yiwp.batmanplusplus.common.item.ItemNugget;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
 
