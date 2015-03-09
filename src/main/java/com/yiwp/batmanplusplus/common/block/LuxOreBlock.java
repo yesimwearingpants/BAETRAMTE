@@ -14,20 +14,22 @@ import net.minecraft.world.World;
 
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
+import com.yiwp.batmanplusplus.lib.utils.BlockHelper;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class LuxOreBlock extends ExtBlock implements IBlock {
 	
-	public static final String[] textureNames = new String[] {Names.Glass.lux, "Nether" + Names.Glass.lux};
-    private IIcon[] icons = new IIcon[textureNames.length];	
-	private static final float[] hardness = new float[] {2.0f, 0.75f};
-	private static final int[] light = new int[] {9, 9};
-	private static final float[] resistance = new float[] {9.9f, 5.0f};
+	public static String[] textureNames;
+    private IIcon[] icons;	
+	private static float[] hardness;
+	private static int[] light;
+	private static float[] resistance;
 
 	public LuxOreBlock() {
 		super(Material.rock);
+		this.initArrays();
 	}
 	
 	@Override
@@ -84,5 +86,24 @@ public class LuxOreBlock extends ExtBlock implements IBlock {
     {
         return 1;
     }
+
+	@Override
+	public void initArrays() {
+		String[] types = new String[] {Names.Glass.lux, "Nether" + Names.Glass.lux};
+		float[] hard = new float[] {2.0f, 0.75f};
+		float[] res = new float[] {9.9f, 5.0f};
+		int[] ll = new int[] {9, 9};
+		if(!BlockHelper.disjoint(types)) {
+			BlockHelper.newArray(types, textureNames);
+			BlockHelper.newArray(hard, hardness);
+			BlockHelper.newArray(res, resistance);
+			BlockHelper.newArray(ll, light);
+		} else {
+			textureNames = types;
+			hardness = hard;
+			resistance = res;
+			light = ll;
+		} icons = new IIcon[textureNames.length];
+	}
 	
 }

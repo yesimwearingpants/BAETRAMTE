@@ -1,20 +1,11 @@
 package com.yiwp.batmanplusplus.common.block;
 
-import java.util.List;
-
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Facing;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 
-import com.cricketcraft.chisel.block.BlockCarvable;
 import com.yiwp.batmanplusplus.common.creativetab.BPPCreativeTab;
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;

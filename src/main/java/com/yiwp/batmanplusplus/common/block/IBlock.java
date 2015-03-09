@@ -26,5 +26,7 @@ public interface IBlock {
     public IIcon getIcon (int side, int meta);
 
     public int damageDropped (int meta);
+    
+	void initArrays();
 
 }

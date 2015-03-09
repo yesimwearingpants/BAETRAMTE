@@ -16,6 +16,7 @@ import net.minecraft.world.World;
 
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
+import com.yiwp.batmanplusplus.lib.utils.BlockHelper;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -23,17 +24,17 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class MetalBlock extends ExtBlock implements IBlock{
 
-	static final String[] metalTypes = new String[] { Names.Metal.adamantium, Names.Metal.meteoricIron,
-	Names.Metal.molybdochalkos, Names.Metal.orichalcum, Names.Metal.titanium, Names.Metal.vibranium, Names.Metal.slag};
-    private IIcon[] icons = new IIcon[metalTypes.length];	
-	private static final float[] hardness = new float[] { 16.0f, 11.0f, 3.1f, 3.5f, 10.0f, 20.f, 10.5f};
-	private static final float[] resistance = new float[] { 50.0f, 35.0f, 9.0f, 9.9f, 30.0f, 40.0f, 8.0f};
+	static String[] metalTypes;
+    private IIcon[] icons;
+    private static float[] hardness;
+	private static float[] resistance;
 	
 	public MetalBlock() {
 		super(Material.iron);
 		this.setStepSound(Block.soundTypeMetal);
 		this.setHardness(16.0f);
 		this.setResistance(35.0f);
+		this.initArrays();
 		
 		setHarvestLevel("pickaxe", 3, 0);
 		setHarvestLevel("pickaxe", 3, 1);
@@ -86,5 +87,22 @@ public class MetalBlock extends ExtBlock implements IBlock{
     public int damageDropped (int meta) {
         return meta;
     }
-	
+
+	@Override
+	public void initArrays() {
+		String[] types = new String[] { Names.Metal.adamantium, Names.Metal.meteoricIron,
+			Names.Metal.molybdochalkos, Names.Metal.orichalcum, Names.Metal.titanium, Names.Metal.vibranium, Names.Metal.slag};
+		float[] hard = new float[] { 16.0f, 11.0f, 3.1f, 3.5f, 10.0f, 20.f, 10.5f};
+		float[] res = new float[] { 50.0f, 35.0f, 9.0f, 9.9f, 30.0f, 40.0f, 8.0f};
+		if(!BlockHelper.disjoint(types)) {
+			BlockHelper.newArray(types, metalTypes);
+			BlockHelper.newArray(hard, hardness);
+			BlockHelper.newArray(res, resistance);
+		} else {
+			metalTypes = types;
+			hardness = hard;
+			resistance = res;
+		} icons = new IIcon[metalTypes.length];
+	} 
+
 }
