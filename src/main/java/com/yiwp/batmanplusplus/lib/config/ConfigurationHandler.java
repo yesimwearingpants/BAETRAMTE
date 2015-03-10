@@ -1,10 +1,11 @@
 package com.yiwp.batmanplusplus.lib.config;
 
 import java.io.File;
+import java.util.List;
+import java.util.ListIterator;
 
-import tconstruct.util.config.PHConstruct;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.common.config.Property;
+import tconstruct.util.config.PHConstruct;
 
 import com.yiwp.batmanplusplus.lib.reference.Names;
 import com.yiwp.batmanplusplus.lib.reference.Reference;
@@ -28,6 +29,8 @@ public class ConfigurationHandler {
 	public static boolean poorore;
 	public static boolean luxgen;
 	public static boolean nluxgen;
+	public static List<String> blocks;
+	public static List<String> blockIn;
 		public static void init (File configFile)	{
 		if (config == null) {
 		
@@ -69,6 +72,19 @@ public class ConfigurationHandler {
 	
 	public static boolean isWorldGenEnabled(boolean bool) {
 		return bool;
+	}
+	
+	private static void blocks(List<String> l1, List<Boolean> l2) {
+		/*	if(!block) {
+		 *		blocks.add("string.name"); 
+		 *
+		 *
+		int i = 0;
+		ListIterator<String> iter = l1.listIterator(i);
+		while(iter.hasNext())
+			if
+		 *
+		 */
 	}
 
 }
