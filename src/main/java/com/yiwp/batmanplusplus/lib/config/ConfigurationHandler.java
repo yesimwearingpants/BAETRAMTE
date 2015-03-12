@@ -30,7 +30,6 @@ public class ConfigurationHandler {
 	public static boolean luxgen;
 	public static boolean nluxgen;
 	public static List<String> blocks;
-	public static List<String> blockIn;
 		public static void init (File configFile)	{
 		if (config == null) {
 		
@@ -74,17 +73,26 @@ public class ConfigurationHandler {
 		return bool;
 	}
 	
-	private static void blocks(List<String> l1, List<Boolean> l2) {
+	private static void blocks(List<String> l1, boolean bool) {
 		/*	if(!block) {
 		 *		blocks.add("string.name"); 
 		 *
 		 *
-		int i = 0;
-		ListIterator<String> iter = l1.listIterator(i);
-		while(iter.hasNext())
-			if
 		 *
 		 */
+		 boolean[] bool0 = null;
+		int i = 0;
+		ListIterator<String> iter = l1.listIterator(i);
+		for(i = 0; i < blocks.size();) {
+			bool0[i++] = bool;
+		} i = 0;
+		while(iter.hasNext()) {
+			for(String s: blocks) {
+				bool0[i] == false;
+				iter.remove();
+				i = i++;
+			}
+		}	
 	}
 
 }

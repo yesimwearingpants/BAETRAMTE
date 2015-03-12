@@ -20,13 +20,15 @@ import com.yiwp.batmanplusplus.lib.config.ConfigurationHandler;
 public class BlockHelper {
 
 	private static List<String> list0 = ConfigurationHandler.blocks;
-	private static List<String> list1Copy;
+	private static List<String> listCopy;
 	
 	public static boolean disjoint(String[] array) {
 		try {
 			List<String> list1 = new ArrayList<String>();
-			for(String x: array)
+			for(String x: array) {
 				list1.add(x);
+				list0.add(x);
+			} ConfigurationHandler.blocks = list0;
 			return Collections.disjoint(list0, list1);
 		} catch(Exception e) {
 			LogHelper.fatal(e);
@@ -36,7 +38,7 @@ public class BlockHelper {
 	
 	public static void newArray(String[] array, String[] retrn) {
 		List<String> list1 = new ArrayList<String>();
-		Collections.copy(list1Copy, list1);
+		Collections.copy(listCopy, list1);
 		for(String x: array)
 			list1.add(x);
 		editNameList(list1, list0);
@@ -47,26 +49,26 @@ public class BlockHelper {
 		List<Float> list2 = new ArrayList<Float>();
 		for(float y: array)
 			list2.add(y);
-		editPropertyList(list1Copy, list0, list2);
+		editPropertyList(listCopy, list0, list2);
 		retrn = new float[list2.size()];
 		int i = 0;
 		for(Float f : list2) {
 			retrn[i++] = (f != null ? f : Float.NaN);
 		}
-		list1Copy = null;
+		listCopy = null;
 	}
 	
 	public static void newArray(int[] array, int[] retrn) {
 		List<Integer> list3 = new ArrayList<Integer>();
 		for(int z: array)
 			list3.add(z);
-		editProperty2List(list1Copy, list0, list3);
+		editProperty2List(listCopy, list0, list3);
 		retrn = new int[list3.size()];
 		int i = 0;
 		for(Integer j : list3) {
 			retrn[i++] = (j != null ? j : Integer.MIN_VALUE);
 		}
-		list1Copy = null;
+		listCopy = null;
 	}
 	
 	private static void editNameList(Collection<String> l1, Collection<String> l2) {
