@@ -50,7 +50,7 @@ public class LuxWorldGen extends ExtWorldGen {
                     			temp.add(block[n]);
                     		}
                 		} 
-                	}block1 = temp.toArray(new Block[0]);
+                	}block1 = temp.toArray(new Block[temp.size()]);
                 		for(int l1 = 0; l1 < block1.length; ++l1) {
                 			if(block1[l1] == Blocks.stone) {
                 				return true;
