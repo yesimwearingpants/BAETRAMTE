@@ -17,11 +17,11 @@ public class BlockInit {
 	public static ExtBlock BlockTitaniumAlumide = new TiAlBlock(7.5f, 25.0f);
 	public static ExtBlock BlockCactusSteel = new CactusSteelBlock(0.1f, 0.1f);
 	public static ExtBlock BlockPressBoard = new PressBoardBlock();
-	public static ExtBlock BlockLux = new LuxBlock("lux", false);
-	public static ExtBlock BlockXray = new XrayBlock();
-	public static ExtBlock BloXXray = new XrayBlox("xray");
+	//public static ExtBlock BlockLux = new LuxBlock("lux", false);
+	//public static ExtBlock BlockXray = new XrayBlock();
+	//public static ExtBlock BloXXray = new XrayBlox("xray");
 	//public static ExtBlock PaneLux = new LuxPane("clear/pane", false);
-	public static ExtBlock BlockLight = new LightBlock();
+	//public static ExtBlock BlockLight = new LightBlock();
 	public static ExtBlock BlockOre = new OreBlock();
 	public static ExtBlock BlockLuxOre = new LuxOreBlock();
 	
@@ -30,9 +30,9 @@ public class BlockInit {
 		GameRegistry.registerBlock(BlockTitaniumAlumide, Names.Textures.block(Names.Metal.titaniumAlumide));
 		GameRegistry.registerBlock(BlockCactusSteel, Names.Textures.block(Names.Metal.cactusSteel));
 		GameRegistry.registerBlock(BlockPressBoard, Names.Textures.block(Names.Misc.board));
-		GameRegistry.registerBlock(BlockLux, "blockLux");
-		GameRegistry.registerBlock(BlockXray, "blockXray");
-		GameRegistry.registerBlock(BloXXray, "bloxXray");
+		//GameRegistry.registerBlock(BlockLux, "blockLux");
+		//GameRegistry.registerBlock(BlockXray, "blockXray");
+		//GameRegistry.registerBlock(BloXXray, "bloxXray");
 		//GameRegistry.registerBlock(PaneLux, "paneLux");
 		GameRegistry.registerBlock(BlockLuxOre, LuxOreItemBlock.class, "oreLux");
 		GameRegistry.registerBlock(BlockMetaMetal, MetalItemBlock.class, "blockMetal");
