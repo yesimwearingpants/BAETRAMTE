@@ -73,24 +73,20 @@ public class ConfigurationHandler {
 		return bool;
 	}
 	
-	private static void blocks(List<String> l1, boolean bool) {
-		/*	if(!block) {
-		 *		blocks.add("string.name"); 
-		 *
-		 *
-		 *
-		 */
-		 boolean[] bool0 = null;
+	private static void isBlockEnabled(List<String> l1, boolean bool) {
+		boolean bool0[] = new boolean[] {};
 		int i = 0;
 		ListIterator<String> iter = l1.listIterator(i);
 		for(i = 0; i < blocks.size();) {
 			bool0[i++] = bool;
-		} i = 0;
+		}
+		i = 0;
 		while(iter.hasNext()) {
 			for(String s: blocks) {
-				bool0[i] == false;
-				iter.remove();
-				i = i++;
+				if(bool0[i] == false) {
+					iter.remove();
+					i = i++;
+				}
 			}
 		}	
 	}
